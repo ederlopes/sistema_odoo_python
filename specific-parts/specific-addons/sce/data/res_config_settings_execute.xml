@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <record model="res.config.settings" id="signup_settings">
+         <field name="auth_signup_uninvited">b2c</field>
+         <field name="auth_signup_reset_password" eval="True" />
+     </record>
+     <function model="res.config.settings" name="execute">
+         <value eval="[ref('signup_settings')]"/>
+         <value eval="{}"/>
+     </function>
+</odoo>

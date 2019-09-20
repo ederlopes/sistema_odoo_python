@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="agencia1" model="agencia">
+            <field name="agencia">3598-x</field>
+            <field name="gecex_id" ref="sce.gecex_banco_bb" />
+            <field name="instituicao_financeira_id" ref="sce.instituicao_bb" />
+            <field name="cpf_cnpj">00.000.000/0000-00.</field>
+            <field name="insc_estadual">111111111111111.</field>
+            <field name="cargo">ANALISTA 1.</field>
+            <field name="active">True</field>
+        </record>
+        <record id="agencia2" model="agencia">
+            <field name="agencia">1111-x</field>
+            <field name="gecex_id" ref="sce.gecex_banco_bb" />
+            <field name="instituicao_financeira_id" ref="sce.instituicao_bb" />
+            <field name="cpf_cnpj">00.000.000/0000-00.</field>
+            <field name="insc_estadual">222111111111111.</field>
+            <field name="cargo">ANALISTA 2.</field>
+            <field name="active">True</field>
+        </record>
+        <record id="agencia3" model="agencia">
+            <field name="agencia">3333-x</field>
+            <field name="instituicao_financeira_id" ref="sce.instituicao_sem_banco_emissor" />
+            <field name="cpf_cnpj">00.000.000/0000-00.</field>
+            <field name="insc_estadual">222111111111111.</field>
+            <field name="cargo">ANALISTA 2.</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

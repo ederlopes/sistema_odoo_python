@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates id="my_menus_template_id" xml:space="preserve">
+    <t t-extend="UserMenu.Actions">
+        <t t-jquery=".dropdown-divider" t-operation="before">
+            <a role="menuitem" href="#" data-menu="meusdados" class="dropdown-item d-none d-md-inline-block">Meus Dados</a>
+        </t>
+    </t>
+</templates>

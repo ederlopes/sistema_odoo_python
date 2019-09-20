@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="natureza_juridica_view_tree" model="ir.ui.view">
+        <field name="name">natureza_juridica.view.tree</field>
+        <field name="model">natureza.juridica</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="natureza_risco_ids" />
+                <field name="active" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="natureza_juridica_view_form" model="ir.ui.view">
+        <field name="name">natureza_juridica.view.form</field>
+        <field name="model">natureza.juridica</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Dados">
+                        <field name="active" />
+                        <label for="name" string="Nome"/>
+                        <field name="natureza_risco_ids" widget="many2many_tags" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="natureza_juridica_action">
+       <field name="name">Natureza Juridica</field>
+       <field name="res_model">natureza.juridica</field>
+       <field name="view_mode">tree,form</field>
+       <field name="view_id" ref="natureza_juridica_view_tree"/>
+       <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('natureza_juridica_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('natureza_juridica_view_form')})
+       ]"/>
+   </record>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- EMPRESA - Garantidor -->
+
+    <!-- Tree da Empresa - Garantidor -->
+    <record id="sce_empresa_garantidor_view_tree" model="ir.ui.view">
+        <field name="name">mlp.garantidor.view.tree</field>
+        <field name="model">garantidor</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="cpf_cnpj" string="CNPJ" />
+                <field name="phone" />
+            </tree>
+        </field>
+    </record>
+
+
+    <!-- Form da Empresa - Garantidor Operacao -->
+    <record id="sce_empresa_garantidor_operacao_view_form" model="ir.ui.view">
+        <field name="name">mlp.empresa.garantidor.view.form</field>
+        <field name="model">garantidor</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <separator string="Garantidor" />
+                    <group>
+                        <field name="is_company" invisible="1"/>
+                        <field name="name" />
+                        <label for="cpf_cnpj" string="CNPJ (equivalente)"/>
+                        <field name="cpf_cnpj" nolabel="1" />
+                        <label for="street" string="Endereço"/>
+                        <div class="o_address_format">
+                            <field name="country_id" placeholder="País" class="o_address_country" options="{'no_create': True}" />
+                            <field name="city" placeholder="Cidade" class="o_address_city" />
+                            <field name="state_id" class="o_address_state" placeholder="Estado" context="{'country_id': country_id, 'zip': zip}" />
+                            <field name="zip" placeholder="CEP" class="o_address_zip"/>
+                            <field name="street" placeholder="Rua..." class="o_address_street" />
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="sce_empresa_garantidor_action" model="ir.actions.act_window">
+        <field name="name">mlp.empresa.garantidor.action</field>
+        <field name="res_model">garantidor</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{'country_id': country_id}</field>
+    </record>
+</odoo>

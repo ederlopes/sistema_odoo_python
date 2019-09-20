@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="tipo_garantia_sem_garantia" model="tipo.garantia">
+            <field name="name">Sem garantia</field>
+            <field name="active">True</field>
+        </record>
+        <record id="tipo_garantia_ccr" model="tipo.garantia">
+            <field name="name">CCR</field>
+            <field name="active">True</field>
+        </record>
+        <record id="tipo_garantia_soberana" model="tipo.garantia">
+            <field name="name">Soberana</field>
+            <field name="active">True</field>
+        </record>
+        <record id="tipo_garantia_pessoal" model="tipo.garantia">
+            <field name="name">Pessoal (Aval ou Carta de Fiança)</field>
+            <field name="permite_criar_garantidor">True</field>
+            <field name="active">True</field>
+        </record>
+        <record id="tipo_garantia_bancaria" model="tipo.garantia">
+            <field name="name">Bancária</field>
+            <field name="permite_criar_garantidor">True</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

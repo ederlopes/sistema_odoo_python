@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="parecer_tecnico_exportador_wizard_view" model="ir.ui.view">
+        <field name="name">Parecer Técnico</field>
+        <field name="model">parecer.tecnico.exportador.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="data_recomendacao"/>
+                    <field name="parecer_tecnico"/>
+                </group>
+                <footer>
+                    <button name="aprovar" string="Aprovar" type="object"
+                            class="oe_highlight" confirm="Tem certeza que
+                            deseja liberar o cadastro para essa empresa?"/>
+                    <button name="reprovar" string="Reprovar" type="object"
+                            class="oe_highlight" confirm="Tem certeza que
+                            deseja reprovar essa empresa?"/>
+                    <button string="Cancelar" class="oe_link"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action da Wizard parecer tecnico do exportador -->
+    <record model="ir.actions.act_window"
+            id="parecer_tecnico_exportador_wizard_action">
+        <field name="name">Parecer Técnico</field>
+        <field name="res_model">parecer.tecnico.exportador.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="parecer_tecnico_exportador_wizard_view"/>
+    </record>
+
+</odoo>

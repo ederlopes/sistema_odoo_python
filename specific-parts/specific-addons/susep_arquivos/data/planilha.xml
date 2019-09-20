@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="CADASTRO" model="susep.planilha">
+        <field name="name">CADASTRO.DBF</field>
+        <field name="active">true</field>
+        <field name="quadro_id" ref="susep_arquivos.arquivos_dbf" />
+    </record>
+    <record id="PREMIT" model="susep.planilha">
+        <field name="name">PREMIT.DBF</field>
+        <field name="active">true</field>
+        <field name="quadro_id" ref="susep_arquivos.arquivos_dbf" />
+    </record>
+    <record id="PREMREC" model="susep.planilha">
+        <field name="name">PREMREC.DBF</field>
+        <field name="active">true</field>
+        <field name="quadro_id" ref="susep_arquivos.arquivos_dbf" />
+    </record>
+    <record id="PREMRECEB" model="susep.planilha">
+        <field name="name">PREMRECEB.DBF</field>
+        <field name="active">true</field>
+        <field name="quadro_id" ref="susep_arquivos.arquivos_dbf" />
+    </record>
+    <record id="RECPROVB" model="susep.planilha">
+        <field name="name">RECPROVB.DBF</field>
+        <field name="active">true</field>
+        <field name="quadro_id" ref="susep_arquivos.arquivos_dbf" />
+    </record>
+    <record id="RESPREM" model="susep.planilha">
+        <field name="name">RESPREM.DBF</field>
+        <field name="active">true</field>
+        <field name="quadro_id" ref="susep_arquivos.arquivos_dbf" />
+    </record>
+    <record id="419" model="susep.planilha">
+        <field name="name">419</field>
+        <field name="active">true</field>
+        <field name="quadro_id" ref="susep_arquivos.quadro_419" />
+    </record>
+
+</odoo>

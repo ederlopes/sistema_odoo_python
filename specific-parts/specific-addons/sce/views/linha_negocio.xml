@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="linha_negocio_view_tree" model="ir.ui.view">
+        <field name="name">linha.negocio.view.tree</field>
+        <field name="model">linha.negocio</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="sigla" />
+                <field name="active" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="linha_negocio_view_form" model="ir.ui.view">
+        <field name="name">linha_negocio.view.form</field>
+        <field name="model">linha.negocio</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group string="Dados">
+                        <field name="active" />
+                        <label for="name" string="Nome"/>
+                        <field name="name" nolabel="1"/>
+                        <field name="sigla" />
+                        <field name="modalidade_ids" widget="many2many_tags" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="linha_negocio_action">
+       <field name="name">Linha de Negocio</field>
+       <field name="res_model">linha.negocio</field>
+       <field name="view_mode">tree,form</field>
+       <field name="view_id" ref="linha_negocio_view_tree"/>
+       <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('linha_negocio_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('linha_negocio_view_form')})
+       ]"/>
+   </record>
+</odoo>

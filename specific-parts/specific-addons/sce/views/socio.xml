@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Form do Sócio - Exportador -->
+    <record id="sce_socio_view_form" model="ir.ui.view">
+        <field name="name">sce.socio.view.form</field>
+        <field name="model">socio</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="tipo_socio"/>
+                        <label for="cpf_cnpj" string="CPF" class="label_cpf_cnpj" attrs="{'invisible':[('tipo_socio', '=', False)]}"/>
+                        <field name="cpf_cnpj" nolabel="1" attrs="{'invisible':[('tipo_socio', '=', False)]}" />
+                        <field name="percentual" class="porcentagem"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="verificar_email" name="Verificar email">
+        <t t-call="web.layout">
+             <t t-set="head_website">
+                <script type="text/javascript">
+                    odoo.session_info = {
+                        is_admin: <t t-esc="json.dumps(request.env.user._is_admin())"/>,
+                        is_system: <t t-esc="json.dumps(request.env.user._is_system())"/>,
+                        is_website_user: <t t-esc="json.dumps(request.env.user._is_public())"/>,
+                        user_id: <t t-esc="json.dumps(request.env.user.id)" />,
+                        is_frontend: true,
+                        translationURL: '/website/translations',
+                    };
+                </script>
+
+                <t t-call-assets="web.assets_common" t-js="false"/>
+                <t t-call-assets="web.assets_frontend" t-js="false"/>
+
+                <t t-call-assets="web.assets_common" t-css="false"/>
+                <t t-call-assets="web.assets_frontend" t-css="false"/>
+            </t>
+            <t t-set="head" t-value="head_website + (head or '')"/>
+            <t t-set="direction" t-value="request.env['res.lang'].search([('code', '=', request.env.lang)]).direction"/>
+            <div class="container">
+                <h1>e-SCE - Sistema de Crédito a Exportação</h1>
+                <div class="alert alert-primary" role="alert">
+                  <h3>Usuário cadastrado com sucesso.</h3>
+                </div>
+                <p>
+                    Obrigado <span t-esc="dados['login']"/> por utilizar o
+                    nosso sistema. Por favor entre na
+                    sua conta de e-mail e confirme seu cadastro através do link
+                    que foi enviado. Caso não tenha recebido cheque sua
+                    caixa de span ou entre em contato com o
+                    Administrador do sistema
+                </p>
+                <footer class="bg-light o_footer">
+                        <t t-call="sce.portal_contact"></t>
+                        <div class="container mt16 mb16" id="footer">
+                            <div class="float-right mb16" t-ignore="true" t-if="not editable">
+                                Powered by <a target="_blank"
+                                              href="http://www.abgf.gov.br">ABGF
+                            </a>
+                            </div>
+                        </div>
+                </footer>
+            </div>
+        </t>
+    </template>
+    <template id="portal_contact" name="Contact">
+        <div class="o_portal_contact_details mb-5">
+            <h4>
+                <t t-if="title" t-esc="title"/>
+                <t t-else="">Nossos
+                contatos</t>
+            </h4>
+            <hr class="mt-1 mb0"/>
+<!--            <h6 class="mb-1"><b t-esc="company.name"/></h6>-->
+            <div class="d-flex align-items-center mb-1">
+                <div class="fa fa-map-marker fa-fw mr-1"></div>
+                <span t-esc="company.partner_id.street"/>
+            </div>
+            <div class="d-flex align-items-center mb-1">
+                <div class="fa fa-envelope fa-fw mr-1"></div>
+                <a t-att-href="'mailto:'+company.email" t-esc="company.email"/>
+            </div>
+            <div class="d-flex flex-nowrap align-items-center mb-1">
+                <div class="fa fa-phone fa-fw mr-1"></div>
+                <span t-esc="company.phone"/>
+            </div>
+        </div>
+    </template>
+</odoo>

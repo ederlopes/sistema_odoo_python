@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="financiamento_acc" model="tipo.financiamento">
+            <field name="name">ACC</field>
+            <field name="sigla">ACC</field>
+            <field name="modalidade_id" ref="sce.modalidade_pre" />
+            <field name="active">True</field>
+        </record>
+        <record id="financiamento_acc_ace" model="tipo.financiamento">
+            <field name="name">ACC + ACE</field>
+            <field name="sigla">ACC + ACE</field>
+            <field name="modalidade_id" ref="sce.modalidade_pre_pos" />
+            <field name="active">True</field>
+        </record>
+        <record id="financiamento_acc_proex" model="tipo.financiamento">
+            <field name="name">ACC + PROEX</field>
+            <field name="sigla">ACC + PROEX</field>
+            <field name="modalidade_id" ref="sce.modalidade_pre_pos" />
+            <field name="active">True</field>
+        </record>
+        <record id="financiamento_rec_proprio" model="tipo.financiamento">
+            <field name="name">RECURSO PRÓPRIO</field>
+            <field name="sigla">RECURSO PRÓPRIO</field>
+            <field name="modalidade_id" ref="sce.modalidade_pos" />
+            <field name="active">True</field>
+        </record>
+        <record id="financiamento_proex" model="tipo.financiamento">
+            <field name="name">PROEX</field>
+            <field name="sigla">PROEX</field>
+            <field name="modalidade_id" ref="sce.modalidade_pos" />
+            <field name="active">True</field>
+        </record>
+        <record id="financiamento_ace" model="tipo.financiamento">
+            <field name="name">ACE</field>
+            <field name="sigla">ACE</field>
+            <field name="modalidade_id" ref="sce.modalidade_pos" />
+            <field name="active">True</field>
+        </record>
+        <record id="financiamento_rec_proprio_mlp_rf" model="tipo.financiamento">
+            <field name="name">RECURSO PRÓPRIO</field>
+            <field name="sigla">RECURSO PRÓPRIO</field>
+            <field name="modalidade_id" ref="sce.modalidade_mlp_rf" />
+            <field name="active">True</field>
+        </record>
+        <record id="financiamento_rec_proprio_mlp_aero" model="tipo.financiamento">
+            <field name="name">RECURSO PRÓPRIO</field>
+            <field name="sigla">RECURSO PRÓPRIO</field>
+            <field name="modalidade_id" ref="sce.modalidade_mlp_aero" />
+            <field name="active">True</field>
+        </record>
+        <record id="financiamento_rec_proprio_mlp_rc" model="tipo.financiamento">
+            <field name="name">RECURSO PRÓPRIO</field>
+            <field name="sigla">RECURSO PRÓPRIO</field>
+            <field name="modalidade_id" ref="sce.modalidade_mlp_rc" />
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="garantidor_bb" model="garantidor">
+            <field name="name">Banco do Brasil</field>
+            <field name="is_company">True</field>
+            <field name="active">True</field>
+        </record>
+        <record id="garantidor_mf" model="garantidor">
+            <field name="name">Ministério das Finanças</field>
+            <field name="is_company">True</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

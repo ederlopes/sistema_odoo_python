@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="natureza_juridica_privada" model="natureza.juridica">
+            <field name="name">Privada</field>
+            <field name="active">True</field>
+        </record>
+
+        <record id="natureza_juridica_publica" model="natureza.juridica">
+            <field name="name">Pública</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="assets_backend" name="inputmask_widget" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/inputmask_widget/static/lib/jquery.inputmask/jquery.inputmask.bundle.js"/>
+                <script type="text/javascript" src="/inputmask_widget/static/src/js/fields.js"/>
+                <script type="text/javascript" src="/inputmask_widget/static/src/js/registry.js"/>
+                <script type="text/javascript" src="/inputmask_widget/static/src/js/socio.js"/>
+            </xpath>
+        </template>
+
+
+        <template id="assets_frontend" inherit_id="website.assets_frontend" priority="1">
+            <xpath expr="//script[last()]" position="after">
+            <script type="text/javascript"
+                    src="/inputmask_widget/static/src/js/jquery.mask.min.js"/>
+                <script type="text/javascript"
+                    src="/inputmask_widget/static/src/js/aplicar_mascara.js"/>
+            </xpath>
+         </template>
+
+
+    </data>
+</odoo>

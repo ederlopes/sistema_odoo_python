@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="quadro" model="susep.quadro">
+        <field name="nome_quadro">QUADRO ESTATISTICO 378 - SUSEP</field>
+        <field name="tab_excel">378</field>
+        <field name="tipo_quadro">1</field>
+        <field name="nome_arquivo_exportacao">EST378</field>
+        <field name="numero_linhas">173</field>
+    </record>
+    <record id="quadro_419" model="susep.quadro">
+        <field name="nome_quadro">QUADRO ESTATISTICO 4194 - SUSEP</field>
+        <field name="tab_excel">419</field>
+        <field name="tipo_quadro">2</field>
+        <field name="nome_arquivo_exportacao">EST419</field>
+        <field name="numero_linhas"></field>
+    </record>
+     <record id="arquivos_dbf" model="susep.quadro">
+        <field name="nome_quadro">RO DE OPERAÇÕES</field>
+        <field name="tab_excel"></field>
+         <field name="tipo_quadro">3</field>
+        <field name="nome_arquivo_exportacao"></field>
+        <field name="numero_linhas"></field>
+    </record>
+</odoo>

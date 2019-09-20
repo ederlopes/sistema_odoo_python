@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--CADASTRO.DBF-->
+    <record id="PC_SEQUENCIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.SEQUENCIA" />
+        <field name="sequence">0</field>
+    </record>
+    <record id="PC_COD_CIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_CIA" />
+        <field name="sequence">1</field>
+    </record>
+    <record id="PC_DT_BASE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_BASE" />
+        <field name="sequence">2</field>
+    </record>
+    <record id="PC_TIPO_PES" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.TIPO_PES" />
+        <field name="sequence">3</field>
+    </record>
+    <record id="PC_NOM_SUBSC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.NOM_SUBSC" />
+        <field name="sequence">4</field>
+    </record>
+    <record id="PC_CPF_CNPJ" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.CPF_CNPJ" />
+        <field name="sequence">5</field>
+    </record>
+    <record id="PC_ENDERECO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.ENDERECO" />
+        <field name="sequence">6</field>
+    </record>
+    <record id="PC_BAIRRO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.BAIRRO" />
+        <field name="sequence">7</field>
+    </record>
+    <record id="PC_CIDADE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.CIDADE" />
+        <field name="sequence">8</field>
+    </record>
+    <record id="PC_UF" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.UF" />
+        <field name="sequence">9</field>
+    </record>
+    <record id="PC_CEP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.CEP" />
+        <field name="sequence">10</field>
+    </record>
+    <record id="PC_PAIS" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.CADASTRO" />
+        <field name="mapeamento_id" ref="susep_arquivos.PAIS" />
+        <field name="sequence">11</field>
+    </record>
+
+    <!--PREMIT.DBF-->
+    <record id="PREMIT_SEQUENCIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.SEQUENCIA" />
+        <field name="sequence">0</field>
+    </record>
+    <record id="PREMIT_COD_CIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_CIA" />
+        <field name="sequence">1</field>
+    </record>
+    <record id="PREMIT_NUM_PROC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_PROC" />
+        <field name="sequence">2</field>
+    </record>
+    <record id="PREMIT_DT_BASE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_BASE" />
+        <field name="sequence">3</field>
+    </record>
+    <record id="PREMIT_TIPO_MOV" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.TIPO_MOV" />
+        <field name="sequence">3</field>
+    </record>
+    <record id="PREMIT_UF_DEP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.UF_DEP" />
+        <field name="sequence">4</field>
+    </record>
+    <record id="PREMIT_UF_RISCO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.UF_RISCO" />
+        <field name="sequence">5</field>
+    </record>
+    <record id="PREMIT_COD_RAMO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_RAMO" />
+        <field name="sequence">6</field>
+    </record>
+    <record id="PREMIT_NUM_APOL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_APOL" />
+        <field name="sequence">7</field>
+    </record>
+    <record id="PREMIT_NUM_END" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_END" />
+        <field name="sequence">8</field>
+    </record>
+    <record id="PREMIT_NUM_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_PROP" />
+        <field name="sequence">9</field>
+    </record>
+    <record id="PREMIT_DT_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_PROP" />
+        <field name="sequence">10</field>
+    </record>
+    <record id="PREMIT_CPF_SEG" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.CPF_SEG" />
+        <field name="sequence">11</field>
+    </record>
+    <record id="PREMIT_QTD_SEG" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.QTD_SEG" />
+        <field name="sequence">12</field>
+    </record>
+    <record id="PREMIT_CPF_TOM" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.CPF_TOM" />
+        <field name="sequence">13</field>
+    </record>
+    <record id="PREMIT_QTD_TOM" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.QTD_TOM" />
+        <field name="sequence">14</field>
+    </record>
+    <record id="PREMIT_DT_EMIS" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_EMIS" />
+        <field name="sequence">15</field>
+    </record>
+    <record id="PREMIT_DT_INI_VIG" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_INI_VIG" />
+        <field name="sequence">16</field>
+    </record>
+    <record id="PREMIT_DT_FIM_VIG" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_FIM_VIG" />
+        <field name="sequence">17</field>
+    </record>
+    <record id="PREMIT_PR_EMIT" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.PR_EMIT" />
+        <field name="sequence">18</field>
+    </record>
+    <record id="PREMIT_PR_COS_CED" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.PR_COS_CED" />
+        <field name="sequence">19</field>
+    </record>
+    <record id="PREMIT_AD_FRAC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.AD_FRAC" />
+        <field name="sequence">20</field>
+    </record>
+    <record id="PREMIT_CUST_APOL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.CUST_APOL" />
+        <field name="sequence">21</field>
+    </record>
+    <record id="PREMIT_IOF" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.IOF" />
+        <field name="sequence">22</field>
+    </record>
+    <record id="PREMIT_COMIS" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.COMIS" />
+        <field name="sequence">22</field>
+    </record>
+    <record id="PREMIT_COMIS_COSS" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.COMIS_COSS" />
+        <field name="sequence">23</field>
+    </record>
+    <record id="PREMIT_PRO_LAB" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.PRO_LAB" />
+        <field name="sequence">24</field>
+    </record>
+    <record id="PREMIT_CPF_ESTIP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.CPF_ESTIP" />
+        <field name="sequence">25</field>
+    </record>
+    <record id="PREMIT_IS" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMIT" />
+        <field name="mapeamento_id" ref="susep_arquivos.IS" />
+        <field name="sequence">26</field>
+    </record>
+
+    <!--PREMREC.DBF-->
+    <record id="PREMREC_SEQUENCIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.SEQUENCIA" />
+        <field name="sequence">0</field>
+    </record>
+    <record id="PREMREC_COD_CIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_CIA" />
+        <field name="sequence">1</field>
+    </record>
+    <record id="PREMREC_DT_BASE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_BASE" />
+        <field name="sequence">2</field>
+    </record>
+    <record id="PREMREC_TIPO_MOV" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.TIPO_MOV" />
+        <field name="sequence">3</field>
+    </record>
+    <record id="PREMREC_COD_RAMO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_RAMO" />
+        <field name="sequence">4</field>
+    </record>
+    <record id="PREMREC_NUM_APOL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_APOL" />
+        <field name="sequence">5</field>
+    </record>
+    <record id="PREMREC_NUM_END" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_END" />
+        <field name="sequence">6</field>
+    </record>
+    <record id="PREMREC_NUM_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_PROP" />
+        <field name="sequence">7</field>
+    </record>
+    <record id="PREMREC_DT_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_PROP" />
+        <field name="sequence">8</field>
+    </record>
+    <record id="PREMREC_PRESTACAO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.PRESTACAO" />
+        <field name="sequence">9</field>
+    </record>
+    <record id="PREMREC_QTDE_PREST" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.QTDE_PREST" />
+        <field name="sequence">10</field>
+    </record>
+    <record id="PREMREC_DT_EMIS_PRE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_EMIS_PRE" />
+        <field name="sequence">11</field>
+    </record>
+    <record id="PREMREC_DT_VEN_PRE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_VEN_PRE" />
+        <field name="sequence">12</field>
+    </record>
+    <record id="PREMREC_DT_VEN_PRE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_VEN_PRE" />
+        <field name="sequence">13</field>
+    </record>
+    <record id="PREMREC_DT_INI_VIG" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_INI_VIG" />
+        <field name="sequence">14</field>
+    </record>
+    <record id="PREMREC_DT_FIM_VIG" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_FIM_VIG" />
+        <field name="sequence">15</field>
+    </record>
+    <record id="PREMREC_PR_EMIT" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.PR_EMIT" />
+        <field name="sequence">16</field>
+    </record>
+    <record id="PREMREC_PERC_COSS" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.PERC_COSS" />
+        <field name="sequence">17</field>
+    </record>
+    <record id="PREMREC_AD_FRAC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.AD_FRAC" />
+        <field name="sequence">18</field>
+    </record>
+    <record id="PREMREC_CUST_APOL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.CUST_APOL" />
+        <field name="sequence">19</field>
+    </record>
+    <record id="PREMREC_IOF" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.IOF" />
+        <field name="sequence">20</field>
+    </record>
+    <record id="PREMREC_OFER" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMREC" />
+        <field name="mapeamento_id" ref="susep_arquivos.OFER" />
+        <field name="sequence">21</field>
+    </record>
+
+    <!--PREMRECEB.DBF-->
+    <record id="PREMRECEB_SEQUENCIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.SEQUENCIA" />
+        <field name="sequence">0</field>
+    </record>
+    <record id="PREMRECEB_COD_CIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_CIA" />
+        <field name="sequence">1</field>
+    </record>
+    <record id="PREMRECEB_DT_BASE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_BASE" />
+        <field name="sequence">2</field>
+    </record>
+    <record id="PREMRECEB_TIPO_MOV" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.TIPO_MOV" />
+        <field name="sequence">3</field>
+    </record>
+    <record id="PREMRECEB_COD_RAMO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_RAMO" />
+        <field name="sequence">4</field>
+    </record>
+    <record id="PREMRECEB_NUM_APOL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_APOL" />
+        <field name="sequence">5</field>
+    </record>
+    <record id="PREMRECEB_NUM_END" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_END" />
+        <field name="sequence">6</field>
+    </record>
+    <record id="PREMRECEB_NUM_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_PROP" />
+        <field name="sequence">7</field>
+    </record>
+    <record id="PREMRECEB_DT_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_PROP" />
+        <field name="sequence">8</field>
+    </record>
+    <record id="PREMRECEB_PRESTACAO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.PRESTACAO" />
+        <field name="sequence">9</field>
+    </record>
+    <record id="PREMRECEB_DT_REC_PRE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_REC_PRE" />
+        <field name="sequence">10</field>
+    </record>
+    <record id="PREMRECEB_DT_VEN_PRE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_VEN_PRE" />
+        <field name="sequence">11</field>
+    </record>
+    <record id="PREMRECEB_NUM_BAN" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_BAN" />
+        <field name="sequence">12</field>
+    </record>
+    <record id="PREMRECEB_CNPJ_BAN" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.CNPJ_BAN" />
+        <field name="sequence">13</field>
+    </record>
+    <record id="PREMRECEB_NUM_BOL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_BOL" />
+        <field name="sequence">14</field>
+    </record>
+    <record id="PREMRECEB_NUM_DOC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_DOC" />
+        <field name="sequence">15</field>
+    </record>
+    <record id="PREMRECEB_NUM_AGE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_AGE" />
+        <field name="sequence">16</field>
+    </record>
+    <record id="PREMRECEB_NUM_NOS" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_NOS" />
+        <field name="sequence">17</field>
+    </record>
+    <record id="PREMRECEB_VAL_DOC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.VAL_DOC" />
+        <field name="sequence">18</field>
+    </record>
+    <record id="PREMRECEB_VAL_DESC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.VAL_DESC" />
+        <field name="sequence">19</field>
+    </record>
+    <record id="PREMRECEB_VAL_MUL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.VAL_MUL" />
+        <field name="sequence">20</field>
+    </record>
+    <record id="PREMRECEB_VAL_COB" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.PREMRECEB" />
+        <field name="mapeamento_id" ref="susep_arquivos.VAL_COB" />
+        <field name="sequence">21</field>
+    </record>
+
+    <!--RECPROVB.DBF-->
+    <record id="RECPROVB_SEQUENCIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.SEQUENCIA" />
+        <field name="sequence">0</field>
+    </record>
+    <record id="RECPROVB_COD_CIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_CIA" />
+        <field name="sequence">1</field>
+    </record>
+    <record id="RECPROVB_DT_BASE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_BASE" />
+        <field name="sequence">2</field>
+    </record>
+    <record id="RECPROVB_COD_RAMO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_RAMO" />
+        <field name="sequence">3</field>
+    </record>
+    <record id="RECPROVB_NUM_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_PROP" />
+        <field name="sequence">4</field>
+    </record>
+    <record id="RECPROVB_DT_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_PROP" />
+        <field name="sequence">5</field>
+    </record>
+    <record id="RECPROVB_DT_REC_PRE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_REC_PRE" />
+        <field name="sequence">6</field>
+    </record>
+    <record id="RECPROVB_NUM_BAN" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_BAN" />
+        <field name="sequence">7</field>
+    </record>
+    <record id="RECPROVB_CNPJ_BAN" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.CNPJ_BAN" />
+        <field name="sequence">8</field>
+    </record>
+    <record id="RECPROVB_NUM_BOL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_BOL" />
+        <field name="sequence">9</field>
+    </record>
+    <record id="RECPROVB_NUM_DOC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_DOC" />
+        <field name="sequence">10</field>
+    </record>
+    <record id="RECPROVB_NUM_AGE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_AGE" />
+        <field name="sequence">11</field>
+    </record>
+    <record id="RECPROVB_NUM_NOS" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_NOS" />
+        <field name="sequence">12</field>
+    </record>
+    <record id="RECPROVB_VAL_DOC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.VAL_DOC" />
+        <field name="sequence">13</field>
+    </record>
+    <record id="RECPROVB_VAL_DESC" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.VAL_DESC" />
+        <field name="sequence">14</field>
+    </record>
+    <record id="RECPROVB_VAL_MUL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.VAL_MUL" />
+        <field name="sequence">15</field>
+    </record>
+    <record id="RECPROVB_VAL_COB" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RECPROVB" />
+        <field name="mapeamento_id" ref="susep_arquivos.VAL_COB" />
+        <field name="sequence">16</field>
+    </record>
+
+    <!--RESPREM.DBF-->
+    <record id="RESPREM_SEQUENCIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.SEQUENCIA" />
+        <field name="sequence">0</field>
+    </record>
+    <record id="RESPREM_COD_CIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_CIA" />
+        <field name="sequence">1</field>
+    </record>
+    <record id="RESPREM_DT_BASE" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_BASE" />
+        <field name="sequence">2</field>
+    </record>
+    <record id="RESPREM_TIPO_MOV" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.TIPO_MOV" />
+        <field name="sequence">3</field>
+    </record>
+    <record id="RESPREM_COD_RAMO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.COD_RAMO" />
+        <field name="sequence">4</field>
+    </record>
+    <record id="RESPREM_NUM_APOL" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_APOL" />
+        <field name="sequence">5</field>
+    </record>
+    <record id="RESPREM_NUM_END" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_END" />
+        <field name="sequence">6</field>
+    </record>
+    <record id="RESPREM_NUM_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.NUM_PROP" />
+        <field name="sequence">7</field>
+    </record>
+    <record id="RESPREM_DT_PROP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_PROP" />
+        <field name="sequence">8</field>
+    </record>
+    <record id="RESPREM_DT_EMIS" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_EMIS" />
+        <field name="sequence">9</field>
+    </record>
+    <record id="RESPREM_DT_INI_VIG" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_INI_VIG" />
+        <field name="sequence">10</field>
+    </record>
+    <record id="RESPREM_DT_FIM_VIG" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.DT_FIM_VIG" />
+        <field name="sequence">11</field>
+    </record>
+    <record id="RESPREM_PR_EMIT" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.PR_EMIT" />
+        <field name="sequence">12</field>
+    </record>
+    <record id="RESPREM_PR_COS_CED" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.PR_COS_CED" />
+        <field name="sequence">13</field>
+    </record>
+    <record id="RESPREM_PR_N_GANHO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.PR_N_GANHO" />
+        <field name="sequence">14</field>
+    </record>
+    <record id="RESPREM_COLET" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.RESPREM" />
+        <field name="mapeamento_id" ref="susep_arquivos.COLET" />
+        <field name="sequence">15</field>
+    </record>
+
+    <!--QUADRO 419-->
+    <record id="419_EMFSEQ" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFSEQ" />
+        <field name="sequence">1</field>
+    </record>
+    <record id="419_ENTCODIGO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.ENTCODIGO" />
+        <field name="sequence">2</field>
+    </record>
+    <record id="419_MRFMESANO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.MRFMESANO" />
+        <field name="sequence">3</field>
+    </record>
+    <record id="419_QUAID" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.QUAID" />
+        <field name="sequence">4</field>
+    </record>
+    <record id="419_ATVCOP" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.ATVCOP" />
+        <field name="sequence">5</field>
+    </record>
+    <record id="419_TPFOPERADOR" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.TPFOPERADOR" />
+        <field name="sequence">6</field>
+    </record>
+    <record id="419_FTRCODIGO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.FTRCODIGO" />
+        <field name="sequence">7</field>
+    </record>
+    <record id="419_LCRCODIGO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.LCRCODIGO" />
+        <field name="sequence">8</field>
+    </record>
+    <record id="419_TCTCODIGO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.TCTCODIGO" />
+        <field name="sequence">9</field>
+    </record>
+    <record id="419_TPECODIGO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.TPECODIGO" />
+        <field name="sequence">10</field>
+    </record>
+    <record id="419_EMFPRAZOFLUXO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFPRAZOFLUXO" />
+        <field name="sequence">11</field>
+    </record>
+    <record id="419_EMFVLREXPRISCO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFVLREXPRISCO" />
+        <field name="sequence">12</field>
+    </record>
+    <record id="419_EMFCNPJFUNDO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFCNPJFUNDO" />
+        <field name="sequence">13</field>
+    </record>
+    <record id="419_EMFCODISIN" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFCODISIN" />
+        <field name="sequence">14</field>
+    </record>
+    <record id="419_EMFCODCUSTODIA" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFCODCUSTODIA" />
+        <field name="sequence">15</field>
+    </record>
+    <record id="419_EMFMULTIPLOFATOR" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFMULTIPLOFATOR" />
+        <field name="sequence">16</field>
+    </record>
+    <record id="419_EMFTXCONTRATADO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFTXCONTRATADO" />
+        <field name="sequence">17</field>
+    </record>
+    <record id="419_EMFTXMERCADO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFTXMERCADO" />
+        <field name="sequence">18</field>
+    </record>
+    <record id="419_TPFOPERADORDERIVATIVO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.TPFOPERADORDERIVATIVO" />
+        <field name="sequence">19</field>
+    </record>
+    <record id="419_EMFVLRDERIVATIVO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFVLRDERIVATIVO" />
+        <field name="sequence">20</field>
+    </record>
+    <record id="419_EMFCODGRUPO" model="susep.planilha_campos">
+        <field name="planilha_id" ref="susep_arquivos.419" />
+        <field name="mapeamento_id" ref="susep_arquivos.EMFCODGRUPO" />
+        <field name="sequence">21</field>
+    </record>
+</odoo>
+
+

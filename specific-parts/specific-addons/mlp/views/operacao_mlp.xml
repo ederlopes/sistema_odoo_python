@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Tree da Operacao -->
+    <record id="operacao_mlp_view_tree" model="ir.ui.view">
+        <field name="name">operacao.view.tree</field>
+       <field name="model">operacao.mlp</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+           <tree>
+                <field name="exportador_id" />
+                <field name="importador_id" />
+                <field name="exportador_linha_negocio_id" />
+                <field name="moeda" />
+                <field name="valor_solicitado" sum="Total operacao"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form da Operacao -->
+    <record id="operacao_mlp_view_form" model="ir.ui.view">
+        <field name="name">sce.operacao.view.form</field>
+       <field name="model">operacao.mlp</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <field name="state_sigla" invisible="1"/>
+                    <button name="enviar_operacao" string="Enviar" class="btn-danger" type="object" attrs="{'invisible': [('state_sigla', '!=', 'aguardando_envio')]}" groups="sce.group_exportador" />
+                    <field name="state" widget="statusbar" clickable="True" />
+                </header>
+                <sheet>
+                    <separator string="Operação - MLP" />
+                    <notebook>
+                        <page string="Dados da Operação">
+                            <group col="4" colspan="4">
+                            <field name="tipo_solicitante" required="True" />
+                            <field name="icoterm" required="True" />
+                            <field name="moeda" required="True" />
+                            <field name="valor_solicitado" required="True" />
+                            <field name="modalidade_escolhida" invisible="1" />
+                        </group>
+                            <group col="4" colspan="4">
+                                <field name="contato" required="True"/>
+                                <field name="contato_email" required="True"/>
+                                <field name="contato_cargo" />
+                                <field name="contato_telefone" />
+                            </group>
+                            <group>
+                                <field name="objeto_exportacao" required="True"/>
+                            </group>
+
+                            <notebook>
+                                <page string="Decomposição do preço">
+                                    <field name="precos_ids" widget="x2many_2d_matrix"
+                                           field_x_axis="decomposicao_localidade_id"
+                                           field_y_axis="decomposicao_preco_id"
+                                           field_value="valor">
+                                        <tree>
+                                            <field name="decomposicao_preco_id"/>
+                                            <field name="decomposicao_localidade_id"/>
+                                            <field name="valor"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                                <page string="Mercadorias">
+                                   <field name="operacao_mercadoria_ids">
+                                        <tree editable="bottom">
+                                           <field name="nu_ncm"/>
+                                           <field name="name"/>
+                                           <field name="valor"/>
+                                           <field name="nu_quantidade"/>
+                                       </tree>
+                                   </field>
+                                </page>
+                            </notebook>
+                        </page>
+                        <page string="Participantes">
+                            <div class="row">
+                              <div class="col-3">
+                                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                  <a class="nav-link active"
+                                     id="v-pills-exportador-tab"
+                                     data-toggle="pill"
+                                     href="#v-pills-exportador"
+                                     role="tab"
+                                     aria-controls="v-pills-exportador"
+                                     aria-selected="true">Exportador</a>
+                                  <a class="nav-link"
+                                     id="v-pills-importador-tab"
+                                     data-toggle="pill"
+                                     href="#v-pills-importador" role="tab"
+                                     aria-controls="v-pills-importador"
+                                     aria-selected="false">Importador</a>
+                                    <a class="nav-link"
+                                     id="v-pills-mandatario-tab"
+                                     data-toggle="pill"
+                                     href="#v-pills-mandatario" role="tab"
+                                     aria-controls="v-pills-mandatario"
+                                     aria-selected="false">Mandatário</a>
+                                  <a class="nav-link"
+                                     id="v-pills-instituicao_financeira-tab"
+                                     data-toggle="pill"
+                                     href="#v-pills-instituicao_financeira"
+                                     role="tab"
+                                     aria-controls="v-pills-instituicao_financeira"
+                                     aria-selected="false">Instituição
+                                      Financeira</a>
+                                  <a class="nav-link"
+                                     id="v-pills-devedor-tab"
+                                     data-toggle="pill"
+                                     href="#v-pills-devedor" role="tab"
+                                     aria-controls="v-pills-devedor"
+                                     aria-selected="false">Devedor</a>
+                                    <a class="nav-link"
+                                     id="v-pills-garantidor-tab"
+                                     data-toggle="pill"
+                                     href="#v-pills-garantidor" role="tab"
+                                     aria-controls="v-pills-garantidor"
+                                     aria-selected="false">Garantidor</a>
+                                    <a class="nav-link"
+                                     id="v-pills-solicitante-tab"
+                                     data-toggle="pill"
+                                     href="#v-pills-solicitante" role="tab"
+                                     aria-controls="v-pills-solicitante"
+                                     aria-selected="false">Solicitante</a>
+                                </div>
+                              </div>
+                              <div class="col-9">
+                                <div class="tab-content" id="v-pills-tabContent">
+                                  <div class="tab-pane fade show active"
+                                       id="v-pills-exportador" role="tabpanel"
+                                       aria-labelledby="v-pills-exportador-tab">
+                                      <separator
+                                              string="Dados do Exportador" />
+                                      <group col="4" colspan="4">
+                                          <field name="exportador_id" col="4" colspan="4"
+                                               required="True"
+                                               options="{'no_create': True}"
+                                               context="{'form_view_ref':'sce.sce_res_partner_empresa_exportador_view_form'}"/>
+                                          <field name="exportador_linha_negocio_id"
+                                               required="True"
+                                               options="{'no_create': True}"
+                                               context="{'exportador_id': 'exportador_id'}" domain="[('exportador_id', '=', exportador_id),('linha_negocio_id', '=', %(sce.linha_negocio_mlp)d)]" />
+                                          <field name="linha_negocio_id" />
+                                      </group>
+                                      <group>
+                                          <field name="setor_atividade_ids"
+                                               required="True"
+                                               options="{'no_create': True}"
+                                               widget="many2many_tags"
+                                               domain="[('linha_negocio_id', '=', linha_negocio_id)]" />
+                                      </group>
+                                  </div>
+                                  <div class="tab-pane fade"
+                                       id="v-pills-importador" role="tabpanel"
+                                       aria-labelledby="v-pills-importador-tab">
+                                      <separator
+                                              string="Dados do Importador" />
+                                      <group>
+                                        <field name="country_id" placeholder="País" />
+                                        <field name="importador_id" placeholder="Importador"
+                                           domain="[('country_id', '=', country_id)]"
+                                           context="{'pais_id': country_id, 'default_country_id': country_id, 'default_is_company': 'True',  'form_view_ref':'sce.sce_empresa_importador_operacao_mlp_view_form'}"/>
+                                      </group>
+                                  </div>
+                                  <div class="tab-pane fade"
+                                       id="v-pills-mandatario" role="tabpanel"
+                                       aria-labelledby="v-pills-mandatario-tab">
+                                      <separator
+                                              string="Dados do Mandatário" />
+                                      <group>
+                                        <field name="mandatario_id" placeholder="Mandatário"
+                                           context="{'default_is_company': 'True',  'form_view_ref':'sce.sce_empresa_mandatario_view_form'}"/>
+                                      </group>
+                                  </div>
+                                    <div class="tab-pane fade"
+                                       id="v-pills-garantidor" role="tabpanel"
+                                       aria-labelledby="v-pills-garantidor-tab">
+                                      <separator
+                                              string="Dados do Garantidor" />
+                                      <group>
+                                          <field name="permite_criar_garantidor" />
+                                        <field name="tipo_garantia_id" placeholder="Tipo de garantia"/>
+                                        <field name="garantidor_id"
+                                               placeholder="Garantidor"
+                                               domain="[('tipo_garantia_id', '=', tipo_garantia_id)]"
+                                               context="{'default_is_company': 'True',  'form_view_ref':'sce.sce_empresa_garantidor_operacao_view_form'}"/>
+                                      </group>
+                                  </div>
+                                  <div class="tab-pane fade"
+                                       id="v-pills-instituicao_financeira"
+                                       role="tabpanel"
+                                       aria-labelledby="v-pills-instituicao_financeira-tab">
+                                      <separator
+                                              string="Dados da Instituição Financeira" />
+                                      <group>
+
+                                          <field name="instituicao_financeira_id" options="{'no_create': True, 'no_open': True}" />
+                                          <field name="agencia_id"
+                                               options="{'no_create': True, 'no_open': True}"
+                                               domain="[('instituicao_financeira_id', '=', instituicao_financeira_id)]"
+                                               attrs="{'invisible': [('instituicao_financeira_id', '=', False)]}"
+                                          />
+
+                                      </group>
+                                  </div>
+                                  <div class="tab-pane fade"
+                                       id="v-pills-devedor" role="tabpanel"
+                                       aria-labelledby="v-pills-devedor-tab">
+                                      <separator string="Dados do Devedor" />
+                                      <group>
+                                        <field name="copiar_dados_importador" widget="boolean_toggle"/>
+                                      </group>
+                                      <group attrs="{'invisible': [('copiar_dados_importador', '=', True)]}">
+                                        <field name="devedor_id"
+                                               context="{'default_is_company': 'True',  'form_view_ref':'sce.sce_empresa_devedor_operacao_mlp_view_form'}"/>
+                                      </group>
+                                      <group attrs="{'invisible': [('copiar_dados_importador', '=', False)]}">
+                                          <field name="devedor_como_importador_name" />
+                                      </group>
+                                  </div>
+                                  <div class="tab-pane fade"
+                                       id="v-pills-solicitante"
+                                       role="tabpanel"
+                                       aria-labelledby="v-pills-solicitante-tab">
+                                      <separator
+                                              string="Dados do Solicitante" />
+                                      <group>
+                                        <field name="solicitante_id" attrs="{'invisible': [('tipo_solicitante', '!=', 'outros')]}"
+                                        context="{'default_is_company': 'True', 'default_is_solicitante': 'True', 'default_country_id': 31, 'form_view_ref':'sce.sce_res_partner_solicitante_view_form'}"/>
+                                      </group>
+                                      <group attrs="{'invisible': [('tipo_solicitante', '=', 'outros')]}" >
+                                          <field name="solicitante_name" />
+                                          <field name="solicitante_cpf_cnpj" />
+                                      </group>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action da Operacao -->
+     <record model="ir.actions.act_window" id="operacao_action_mlp">
+       <field name="name">Operação MLP</field>
+       <field name="res_model">operacao.mlp</field>
+       <field name="view_mode">tree,form</field>
+       <field name="view_id" ref="operacao_mlp_view_tree"/>
+       <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('operacao_mlp_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('operacao_mlp_view_form')})
+       ]"/>
+         <field name="context">{'default_status_id':1}</field>
+   </record>
+</odoo>

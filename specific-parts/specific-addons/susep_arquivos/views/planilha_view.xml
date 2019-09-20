@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="susep_planilha_form">
+        <field name="name">susep.planilha.form</field>
+        <field name="model">susep.planilha</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <separator string="Planilha " />
+                    <group>
+                        <field name="name" />
+                        <label for="active" string="Ativo"/>
+                        <field name="active" nolabel="1" />
+                    </group>
+                    <group>
+                        <field name="planilha_campo_ids"
+                               context="{'default_planilha_id': active_id}"
+                        />
+                        <field name="quadro_id" invisible="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="susep_planilha_tree">
+        <field name="name">susep.planilha.tree</field>
+        <field name="model">susep.planilha</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Idea list">
+                <field name="name" />
+                <field name="planilha_campo_ids" />
+                <field name="active" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="susep_planilha_action">
+        <field name="name">Planilha</field>
+        <field name="res_model">susep.planilha</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

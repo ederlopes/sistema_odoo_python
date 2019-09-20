@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="susep_quadro_form">
+        <field name="name">susep.quadro.form</field>
+        <field name="model">susep.quadro</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <separator string="Quadro Susep" />
+                    <group>
+                        <field name="tipo_quadro" />
+                    </group>
+                    <group col="1" colspan="2">
+                        <field name="nome_quadro" />
+                        <field name="tab_excel" />
+                        <field name="nome_arquivo_exportacao" />
+                        <field name="numero_linhas" />
+                    </group>
+                    <group>
+                        <field name="planilha_ids" widget="many2many" />
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="susep_quadro_tree">
+        <field name="name">susep.quadro.tree</field>
+        <field name="model">susep.quadro</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Idea list">
+                <field name="nome_quadro"/>
+                <field name="tab_excel" />
+                <field name="nome_arquivo_exportacao" />
+                <field name="numero_linhas" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="susep_quadro_action">
+        <field name="name">Quadro</field>
+        <field name="res_model">susep.quadro</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="tipo_garantia_garantidor1"
+                model="tipo.garantia.garantidor">
+            <field name="tipo_garantia_id" ref="mlp.tipo_garantia_ccr" />
+            <field name="garantidor_id" ref="mlp.garantidor_bb" />
+        </record>
+        <record id="tipo_garantia_garantidor2"
+                model="tipo.garantia.garantidor">
+            <field name="tipo_garantia_id" ref="mlp.tipo_garantia_soberana" />
+            <field name="garantidor_id" ref="mlp.garantidor_bb" />
+        </record>
+        <record id="tipo_garantia_garantidor3"
+                model="tipo.garantia.garantidor">
+            <field name="tipo_garantia_id" ref="mlp.tipo_garantia_soberana" />
+            <field name="garantidor_id" ref="mlp.garantidor_mf" />
+        </record>
+    </data>
+</odoo>

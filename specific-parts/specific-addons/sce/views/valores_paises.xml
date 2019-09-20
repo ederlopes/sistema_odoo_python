@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="valores_paises_view_tree" model="ir.ui.view">
+        <field name="name">valores.paises.view.tree</field>
+        <field name="model">valores.paises</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree>
+                    <field name="pais_id" />
+                    <field name="risco" />
+                    <field name="data_vigencia" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="valores_paises_view_form" model="ir.ui.view">
+        <field name="name">valores.paises.view.form</field>
+        <field name="model">valores.paises</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                     <group col="4">
+                        <field name="pais_id" />
+                        <field name="data_vigencia" />
+                        <field name="risco" />
+                        <field name="pres_credito" />
+                        <field name="ibnr" />
+                        <field name="pip" />
+                        <field name="lim_credito" />
+                        <field name="import_brasil" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+
+    </record>
+
+    <record model="ir.actions.act_window" id="valores_paises_action">
+       <field name="name">Valores Paises</field>
+       <field name="res_model">valores.paises</field>
+       <field name="view_mode">tree,form</field>
+       <field name="view_id" ref="valores_paises_view_tree"/>
+       <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('valores_paises_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('valores_paises_view_form')})
+       ]"/>
+   </record>
+
+
+
+</odoo>

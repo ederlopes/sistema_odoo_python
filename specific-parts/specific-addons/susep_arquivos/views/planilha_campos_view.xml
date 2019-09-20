@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="susep_mapeamento_form">
+        <field name="name">susep.planilha_campo.form</field>
+        <field name="model">susep.planilha_campos</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <separator
+                            string="Mapeamento de Campos Registro Operacional " />
+                    <group>
+                        <field name="planilha_id" invisible="1" />
+                        <field name="mapeamento_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="susep_mapeamento_tree">
+        <field name="name">susep.planilha_campo.tree</field>
+        <field name="model">susep.planilha_campos</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <!--<tree default_order='name' string="Idea list">-->
+            <tree string="Idea list">
+                <field name="sequence" widget="handle" />
+                <field name="planilha_id"  />
+                <field name="mapeamento_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="susep_planilha_campo_action">
+        <field name="name">planilha_campo</field>
+        <field name="res_model">susep.planilha_campos</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+</odoo>

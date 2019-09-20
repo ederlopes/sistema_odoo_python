@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="instituicao_bb" model="instituicao.financeira">
+            <field name="name">Banco do Brasil</field>
+            <field name="company_id">1</field>
+            <field name="display_name">Banco do Brasil</field>
+            <field name="cpf_cnpj">00.000.000/0001-91.</field>
+            <field name="country_id">31</field>
+            <field name="state_id">89</field>
+            <field name="bank_id" ref="sce.banco_bb" />
+            <field name="is_solicitante">false</field>
+            <field name="active">True</field>
+        </record>
+        <record id="instituicao_sem_banco_emissor" model="instituicao.financeira">
+            <field name="name">Sem banco emissor</field>
+            <field name="company_id">1</field>
+            <field name="display_name">Sem banco emissor</field>
+            <field name="cpf_cnpj">00.000.000/0000-00.</field>
+            <field name="country_id">31</field>
+            <field name="state_id">89</field>
+            <field name="bank_id" ref="sce.sem_banco_emissor" />
+            <field name="is_solicitante">false</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

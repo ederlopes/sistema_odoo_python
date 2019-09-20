@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="setor_atividade1" model="setor.atividade">
+            <field name="name">ANIMAIS VIVOS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade2" model="setor.atividade">
+            <field name="name">CARNES, MIÚDOS, PREPARAÇÕES DE CARNE E OUTROS PRODUTOS DE ORIGEM ANIMAL COMESTÍVEIS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade3" model="setor.atividade">
+            <field name="name">PEIXES E CRUSTÁCEOS, MOLUSCOS E OS OUTROS INVERTEBRADOS AQUÁTICOS E SUAS PREPARAÇÕES</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade4" model="setor.atividade">
+            <field name="name">LATICÍNIOS E OUTROS PRODUTOS COMESTÍVEIS DE ORIGEM ANIMAL E PREPARAÇÕES ALIMENTÍCIAS DIVERSAS, INCLUSIVE ALIMENTOS PREPARADOS PARA ANIMAIS,  E RESÍDUOS E DESPERDÍCIOS DAS INDÚSTRIAS ALIMENTARES</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade5" model="setor.atividade">
+            <field name="name">VEGETAIS E OUTROS PRODUTOS DE ORIGEM VEGETAL COMESTÍVEIS OU NÃO</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade6" model="setor.atividade">
+            <field name="name">BEBIDAS, LÍQUIDOS ALCOÓLICOS E VINAGRES</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade7" model="setor.atividade">
+            <field name="name">TABACO E SEUS SUCEDÂNEOS MANUFATURADOS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade8" model="setor.atividade">
+            <field name="name">FRUTAS, OUTROS PRODUTOS AGRÍCOLAS E SEUS DERIVATIVOS, COMESTÍVEIS OU NÃO, E PLANTAS, PRODUTOS DE FLORICULTURA E HORTÍCOLAS COMESTÍVEIS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade9" model="setor.atividade">
+            <field name="name">FIOS E TECIDOS DE SEDA, LÃ, MALHA, ALGODÃO E DE OUTRAS MATÉRIAS TÊXTEIS, SINTÉTICAS OU ARTIFICIAIS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade10" model="setor.atividade">
+            <field name="name">ROUPAS, DE MALHAS E OUTRAS PEÇAS DO VESTUÁRIO, DE MATÉRIAS TÊXTEIS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade11" model="setor.atividade">
+            <field name="name">TAPETES, TAPEÇARIAS, RENDAS, BORDADOS, TECIDOS ESPECIAIS E OUTROS ARTEFATOS TÊXTEIS E SIMILARES CONFECCIONADOS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade12" model="setor.atividade">
+            <field name="name">CALÇADOS E ARTEFATOS DE USO SEMELHANTE</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade13" model="setor.atividade">
+            <field name="name">PRODUTOS QUÍMICOS, TINTAS, PREPARAÇÕES LUBRIFICANTES, PRODUTOS DE PERFUMARIA, COSMÉTICOS, DE LIMPEZA, BORRACHA, PLÁSTICO, E SUAS OBRAS, E OUTROS PRODUTOS AFINS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade14" model="setor.atividade">
+            <field name="name">PRODUTOS FARMACÊUTICOS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade15" model="setor.atividade">
+            <field name="name">PRODUTOS FEITOS DE MADEIRA EXCETO MÓVEIS, VIME E AFINS, E CONSTRUÇÕES PRÉ-FABRICADAS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade16" model="setor.atividade">
+            <field name="name">PRODUTOS DE PAPEL E PAPELÃO, LIVROS, JORNAIS E OUTROS PRODUTOS DAS INDÚSTRIAS GRÁFICAS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade17" model="setor.atividade">
+            <field name="name">PELES E COUROS, SEUS PRODUTOS, EXCETO CALÇADOS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade18" model="setor.atividade">
+            <field name="name">FERROS, AÇOS, METAIS E METALÚRGICOS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade19" model="setor.atividade">
+            <field name="name">MÁQUINAS, APARELHOS, ELETRO-DOMÉSTICOS, FERRAMENTAS E INSTRUMENTOS MECÂNICOS, REATORES NUCLEARES, CALDEIRAS, E SUAS PARTES</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade20" model="setor.atividade">
+            <field name="name">BENS DE CONSUMO E DISPOSITIVOS ELÉTRO-ELETRÔNICOS E SUAS PARTES</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade21" model="setor.atividade">
+            <field name="name">LOCOMOTIVAS E AFINS, EMBARCAÇÕES, ESTRUTURAS FLUTUANTES, AERONAVES, APARELHOS ESPACIAIS E VEÍCULOS, MOTORIZADOS OU NÃO</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade22" model="setor.atividade">
+            <field name="name">ACESSÓRIOS PARA VEÍCULOS, PARTES E ACESSÓRIOS DE AERONAVES, DE APARELHOS ESPACIAIS, DE EMBARCAÇÕES E DE ESTRUTURAS FLUTUANTES, DE LOCOMOTIVAS E AFINS, MOTORIZADOS OU NÃO</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade23" model="setor.atividade">
+            <field name="name">MÓVEIS, EXCETO DE ESCRITÓRIO</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade24" model="setor.atividade">
+            <field name="name">MÓVEIS E MATERIAL DE ESCRITÓRIO</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade25" model="setor.atividade">
+            <field name="name">PRODUTOS CERÂMICOS, VIDROS E SUAS OBRAS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade26" model="setor.atividade">
+            <field name="name">PRODUTOS DIVERSOS, COMO GUARDA-CHUVAS, BENGALAS, PENAS, FLORES ARTIFICIAIS, BIJUTERIAS, OBJETOS DE ARTE, DE COLEÇÃO E ANTIGUIDADES, OBRAS DE FERRO E AÇO, TAIS COMO FERRAMENTAS MANUAIS, ARTEFATOS DE CUTELARIA E TALHERES, E SUAS PARTES, DE METAIS COMUNS, PRODUTOS E ÓLEOS MINERAIS, PÉROLAS, PEDRAS E METAIS PRECIOSOS, E SUAS OBRAS, E OBRAS DE PEDRA, GESSO, CIMENTO, AMIANTO, MICA OU DE MATÉRIAS SEMELHANTES, MÁQUINAS, INSTRUMENTOS E APARELHOS DE ÓTICA, DE FOTOGRAFIA, DE CINEMATOGRAFIA, DE RELOJOARIA, DE MEDIDA, DE CONTROLE OU DE PRECISÃO, INSTRUMENTOS E APARELHOS MÉDICO-CIRÚRGICOS, E OUTROS APARELHOS E EQUIPAMENTOS, E SUAS PARTES, BRINQUEDOS, JOGOS, ARTIGOS PARA DIVERTIMENTO OU PARA ESPORTE E INSTRUMENTOS MUSICAIS, SUAS PARTES E ACESSÓRIOS, PRODUTOS DE ORIGEM ANIMAL NÃO COMESTÍVEIS, ABSORVENTES E TAMPÕES HIGIÊNICOS, FRALDAS PARA BEBÊS E ARTIGOS HIGIÊNICOS SEMELHANTES, CHAPÉUS, ETC</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade27" model="setor.atividade">
+            <field name="name">MÁRMORES, GRANITOS E OUTRAS PEDRAS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade28" model="setor.atividade">
+            <field name="name">SERVIÇOS</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">true</field>
+        </record>
+        <record id="setor_atividade29" model="setor.atividade">
+            <field name="name">TESTE MLP</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mlp" />
+            <field name="active">true</field>
+        </record>
+    </data>
+</odoo>

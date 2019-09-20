@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- sub-menu operacao-mpme -->
+    <menuitem id="operacao_sub_menu_mpme"
+        name="Micro e Pequena Empresa - MPME"
+        action="operacao_action_mpme"
+        parent="sce.operacao_menu"
+        sequence="30"/>
+</odoo>

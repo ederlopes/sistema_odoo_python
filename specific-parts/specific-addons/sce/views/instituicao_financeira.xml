@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Instituição Financeira -->
+
+    <!-- Tree Instituição Financeira -->
+    <record id="sce_instituicao_financeira_view_tree" model="ir.ui.view">
+        <field name="name">sce.instituicao.financeira.view.tree</field>
+        <field name="model">instituicao.financeira</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="cpf_cnpj" string="CNPJ" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form Instituição Financeira -->
+    <record id="sce_instituicao_financeira_view_form" model="ir.ui.view">
+        <field name="name">sce.instituicao.financeira.view.form</field>
+        <field name="model">instituicao.financeira</field>
+        <field name="priority">15</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <separator string="Instituição Financeira" />
+<!--                    <field name="is_company" invisible="True"/>-->
+
+<!--                    <group>-->
+<!--                        <group>-->
+<!--                            <label for="cpf_cnpj" string="CNPJ" />-->
+<!--                            <field name="cpf_cnpj" nolabel="1" />-->
+<!--                        </group>-->
+<!--                    </group>-->
+                    <notebook>
+                        <page string="Agências">
+<!--                            <field name="bank_ids" widget="one2many_list" nolabel="1" >-->
+<!--                                <tree>-->
+<!--                                    <field name="name" />-->
+<!--                                    <field name="state"/>-->
+<!--                                    <field name="country"/>-->
+<!--                                </tree>-->
+<!--                            </field>-->
+                        </page>
+
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Form Instituição Financeira - Operação -->
+    <record id="sce_instituicao_financeira_operacao_view_form" model="ir.ui.view">
+        <field name="name">sce.instituicao.financeira.operacao.view.form</field>
+        <field name="model">instituicao.financeira</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <separator string="Instituição Financeira" />
+                    <group>
+                        <field name="is_company" invisible="True"/>
+                        <field name="name" />
+                        <label for="cpf_cnpj" string="CNPJ "/>
+                        <field name="cpf_cnpj" nolabel="1" />
+                        <label for="street" string="Endereço"/>
+                        <div class="o_address_format">
+                            <field name="country_id" placeholder="País"
+                                   class="o_address_country" options="{'no_create': True}" />
+                            <field name="city" placeholder="Cidade" class="o_address_city" />
+                            <field name="state_id" class="o_address_state" placeholder="Estado" context="{'country_id': country_id, 'zip': zip}" />
+                            <field name="zip" placeholder="CEP" class="o_address_zip"/>
+                            <field name="street" placeholder="Rua..." class="o_address_street" />
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

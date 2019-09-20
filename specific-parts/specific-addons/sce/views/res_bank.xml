@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- BANCO -->
+
+    <!-- Tree do Banco -->
+    <record id="sce_bank_view_tree" model="ir.ui.view">
+        <field name="name">sce.bank.view.tree</field>
+        <field name="model">res.bank</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form do banco -->
+    <record id="sce_bank_view_form" model="ir.ui.view">
+        <field name="name">sce.bank.view.form</field>
+        <field name="model">res.bank</field>
+        <field name="priority">16</field>
+        <field name="inherit_id" ref="base.view_res_bank_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='active']" position="replace"></xpath>
+            <xpath expr="//group[1]" position="before">
+                <div class="oe_button_box" style="float: right;" name="button_box" groups="sce.group_analista_abgf">
+                    <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-circle-o">
+                        <field name="active" widget="boolean_button"
+                               options='{"terminology": {
+                                "string_true": "Ativo",
+                                "hover_true": "Desativar",
+                                "string_false": "Desativado",
+                                "hover_false": "Ativar"}}' />
+                    </button>
+                    </div>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="sce_res_bank_action" model="ir.actions.act_window">
+        <field name="name">Instituição Financeira</field>
+        <field name="res_model">res.bank</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

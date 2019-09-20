@@ -1,0 +1,28 @@
+version: "3"
+services:
+  db:
+    image: postgres:9.6
+    container_name: "db_sce"
+    restart: always
+    volumes:
+      - ./docker/postgres:/var/lib/postgresql/data
+      - ./docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_USER: "postgres"
+      POSTGRES_PORT: "5432"
+    ports:
+      - '54320:5432'
+  web:
+    container_name: "web_odoo_sce"
+    build: .
+    restart: always
+    tty: true
+    stdin_open: true
+    expose:
+      - "8069"
+    ports:
+      - '8069:8069'
+    volumes:
+      - ./specific-parts:/odoo/specific-parts
+    depends_on:
+      - db

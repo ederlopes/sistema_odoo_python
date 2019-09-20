@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="validacao_mpme01" model="validacao">
+            <field name="name">Consulta ao SIMPLES NACIONAL ENVIO</field>
+            <field name="url">http://www8.receita.fazenda.gov.br/simplesnacional/aplicacoes.aspx?id=21</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">True</field>
+        </record>
+        <record id="validacao_mpme02" model="validacao">
+            <field name="name">Informações do MDIC - Perfil das Exportações</field>
+            <field name="url">http://www.desenvolvimento.gov.br/sitio/interna/interna.php?area=5&#38;menu=603</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">True</field>
+        </record>
+        <record id="validacao_mpme03" model="validacao">
+            <field name="name">Situação de Regularidade do Empregador - FGTS</field>
+            <field name="url">https://webp.caixa.gov.br/cidadao/Crf/FgeCfSCriteriosPesquisa.asp</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">True</field>
+        </record>
+        <record id="validacao_mpme04" model="validacao">
+            <field name="name">Certidão Negativa de Débitos - PGFN</field>
+            <field name="url">http://www.receita.fazenda.gov.br/aplicacoes/ATSPO/certidao/CndconjuntaInter/InformaNICertidao.asp?Tipo=1</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">True</field>
+        </record>
+        <record id="validacao_mpme05" model="validacao">
+            <field name="name">Comprovante de Inscrição e de Situação Cadastral - CNPJ</field>
+            <field name="url">http://www.receita.fazenda.gov.br/PessoaJuridica/CNPJ/cnpjreva/Cnpjreva_Solicitacao.asp</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">True</field>
+        </record>
+        <record id="validacao_mpme06" model="validacao">
+            <field name="name">Demonstrativo de Resultado - DRE</field>
+            <field name="url">http://www010.dataprev.gov.br/CWS/CONTEXTO/PCND1/PCND1.HTML</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">True</field>
+        </record>
+        <record id="validacao_mpme07" model="validacao">
+            <field name="name">Consulta ao CEIS e CNEP</field>
+            <field name="url">http://www.portaltransparencia.gov.br/sancoes</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">True</field>
+        </record>
+        <record id="validacao_mpme08" model="validacao">
+            <field name="name">Cadastro de Empregadores que tenham submetido trabalhadores a condições análogas à de escravo</field>
+            <field name="url">http://trabalho.gov.br/fiscalizacao-combate-trabalho-escravo</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">True</field>
+        </record>
+        <record id="validacao_mpme09" model="validacao">
+            <field name="name">Consulta de Autuações Ambientais e Embargos</field>
+            <field name="url">https://servicos.ibama.gov.br/ctf/publico/areasembargadas/ConsultaPublicaAreasEmbargadas.php</field>
+            <field name="linha_negocio_id" ref="sce.linha_negocio_mpme" />
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

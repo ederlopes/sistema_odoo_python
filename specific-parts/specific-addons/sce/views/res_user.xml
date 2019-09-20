@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <record id="view_users_form_cpf" model="ir.ui.view">
+            <field name="name">sce.res_users_form.inherit</field>
+            <field name="model">res.users</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="base.view_users_form"/>
+            <field name="arch" type="xml">
+               <xpath expr="//field[@name='login']" position="after">
+                    <label for="cpf_cnpj" string="CPF" />
+                    <field name="cpf_cnpj" class="o_field_char o_field_widget o_input o_required_modifier" widget="mask" data-inputmask="'mask': '999.999.999-99'" nolabel="1" />
+                    <label for="password" string="Senha" />
+                    <field name="password" class="o_field_char o_field_widget o_input o_required_modifier" nolabel="1" password="True"/>
+                </xpath>
+            </field>
+        </record>
+</odoo>

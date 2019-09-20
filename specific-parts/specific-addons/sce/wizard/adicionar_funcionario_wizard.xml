@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="adicionar_funcionario_wizard_view" model="ir.ui.view">
+        <field name="name">Adicionar Funcionário</field>
+        <field name="model">adicionar.funcionario.wizard</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="name"/>
+                    <field name="email"/>
+                    <field name="cpf" widget="mask"
+                           data-inputmask="'mask':'999.999.999-99'"/>
+                </group>
+                <footer>
+                    <button name="adicionar_funcionario" string="Adicionar"
+                            type="object" class="oe_highlight"/>
+                    <button string="Cancelar" class="oe_link"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action da Wizard criar funcionário -->
+    <record model="ir.actions.act_window"
+            id="adicionar_funcionario_wizard_action">
+        <field name="name">Adicionar Funcionário</field>
+        <field name="res_model">adicionar.funcionario.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="adicionar_funcionario_wizard_view"/>
+    </record>
+
+</odoo>

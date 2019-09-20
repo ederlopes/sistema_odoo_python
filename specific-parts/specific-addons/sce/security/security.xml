@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Categoria/Grupo de funcionários ABGF -->
+        <record model="ir.module.category" id="module_category_funcionario_abgf">
+            <field name="name">Funcionário ABGF</field>
+            <field name="description">Funcionário da ABGF.</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="sce.group_analista_abgf" model="res.groups">
+            <field name="name">Analista</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+            <field name="category_id" ref="module_category_funcionario_abgf"/>
+        </record>
+
+        <record id="sce.group_gerente_abgf" model="res.groups">
+            <field name="name">Gerente</field>
+            <field name="implied_ids" eval="[(4, ref('sce.group_analista_abgf'))]"/>
+            <field name="category_id" ref="module_category_funcionario_abgf"/>
+            <field name="users" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <!-- Grupo de Exportadores -->
+        <record id="sce.group_exportador" model="res.groups">
+            <field name="name">Exportador</field>
+            <field name="implied_ids" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="sce_parner_exportador_rule" model="ir.rule">
+            <field name="name">SCE Parter visualiza o proprio</field>
+            <field name="model_id" ref="base.model_res_partner" />
+            <field name="groups"
+                   eval="[(6, 0, [ref('sce.group_exportador')])]" />
+            <field name="active">False</field>
+            <field name="domain_force">['|','|','|',
+                ('id', '=', user.partner_id.id),
+                ('parent_id','=',user.partner_id.id),
+                ('funcionario_exportador_ids.funcionario_id', 'in', [user.partner_id.id]), ]
+            </field>
+            <field name="perm_read">True</field>
+            <field name="perm_create">True</field>
+            <field name="perm_write">True</field>
+            <field name="perm_unlink">False</field>
+        </record>
+
+        <record id="sce_socio_rule" model="ir.rule">
+            <field name="name">SCE Socio visualiza o proprio</field>
+            <field name="model_id" ref="model_socio" />
+            <field name="groups"
+                   eval="[(6, 0, [ref('sce.group_exportador')])]" />
+            <field name="active">True</field>
+            <field name="domain_force">[('exportador_id.parent_id', '=', user.partner_id.id)]</field>
+            <field name="perm_read">True</field>
+            <field name="perm_create">True</field>
+            <field name="perm_write">True</field>
+            <field name="perm_unlink">True</field>
+        </record>
+
+        <record id="editar_campo_exportador_status_rascunho" model="ir.rule">
+            <field name="name">Edita campo exportador com status de rascunho</field>
+            <field name="model_id" ref="model_exportador" />
+            <field name="groups"
+                   eval="[(6, 0, [ref('sce.group_exportador')])]" />
+            <field name="active">True</field>
+            <field name="domain_force">[('state', '=', 'rascunho')]</field>
+            <field name="perm_read">True</field>
+            <field name="perm_create">True</field>
+            <field name="perm_write">True</field>
+            <field name="perm_unlink">True</field>
+        </record>
+
+        <record id="editar_campo_exportador_analista_gerente" model="ir.rule">
+            <field name="name">Edita campo exportador analista e gerente</field>
+            <field name="model_id" ref="model_exportador" />
+            <field name="groups"
+                   eval="[(4, ref('sce.group_analista_abgf')), (4, ref('sce.group_gerente_abgf'))]" />
+            <field name="active">True</field>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="perm_read">True</field>
+            <field name="perm_create">True</field>
+            <field name="perm_write">True</field>
+            <field name="perm_unlink">True</field>
+        </record>
+
+        <record id="editar_campo_exportador_status_dif_rascunho" model="ir.rule">
+            <field name="name">Edita campo exportador com status diferente de rascunho</field>
+            <field name="model_id" ref="model_exportador" />
+            <field name="groups"
+                   eval="[(6, 0, [ref('sce.group_exportador')])]" />
+            <field name="active">True</field>
+            <field name="domain_force">[('state', '!=', 'rascunho')]</field>
+            <field name="perm_read">True</field>
+            <field name="perm_create">True</field>
+            <field name="perm_write">False</field>
+            <field name="perm_unlink">False</field>
+        </record>
+    </data>
+</odoo>

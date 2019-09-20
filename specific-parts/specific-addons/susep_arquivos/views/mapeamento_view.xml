@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="susep_mapeamento_form">
+        <field name="name">susep.mapeamento.form</field>
+        <field name="model">susep.mapeamento</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <separator
+                            string="Mapeamento de Campos Registro Operacional " />
+                    <group>
+                        <field name="name" />
+                        <field name="tipo_campo" />
+                        <field name="tamanho_campo" />
+                        <field name="formato1" />
+                        <field name="formato2" />
+                        <field name="trocar_valor" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="susep_mapeamento_tree">
+        <field name="name">susep.mapeamento.tree</field>
+        <field name="model">susep.mapeamento</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <!--<tree default_order='name' string="Idea list">-->
+            <tree string="Idea list">
+                <field name="name" />
+                <field name="tipo_campo" />
+                <field name="tamanho_campo" />
+                <field name="formato1" />
+                <field name="formato2" />
+                <field name="trocar_valor" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="susep_mapeamento_action">
+        <field name="name">mapeamento</field>
+        <field name="res_model">susep.mapeamento</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

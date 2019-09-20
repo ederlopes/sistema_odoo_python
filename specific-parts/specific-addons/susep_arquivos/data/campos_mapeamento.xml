@@ -1,0 +1,554 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="SEQUENCIA" model="susep.mapeamento">
+        <field name="name">SEQUENCIA</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">10,0</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="COD_CIA" model="susep.mapeamento">
+        <field name="name">COD_CIA</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">5</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="DT_BASE" model="susep.mapeamento">
+        <field name="name">DT_BASE</field>
+        <field name="tipo_campo">D</field>
+        <field name="tamanho_campo"></field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="TIPO_PES" model="susep.mapeamento">
+        <field name="name">TIPO_PES</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">1</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NOM_SUBSC" model="susep.mapeamento">
+        <field name="name">NOM_SUBSC</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">30</field>
+        <field name="formato1">{:.30}</field>
+
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="ENDERECO" model="susep.mapeamento">
+        <field name="name">ENDERECO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">30</field>
+        <field name="formato1">{:.30}</field>
+
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="CPF_CNPJ" model="susep.mapeamento">
+        <field name="name">CPF_CNPJ</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">14</field>
+        <field name="formato1">{:.14}</field>
+
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="BAIRRO" model="susep.mapeamento">
+        <field name="name">BAIRRO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">30</field>
+        <field name="formato1">{:.30}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="CIDADE" model="susep.mapeamento">
+        <field name="name">CIDADE</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">30</field>
+        <field name="formato1">{:.30}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="UF" model="susep.mapeamento">
+        <field name="name">UF</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">2</field>
+        <field name="formato1">{:.2}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="CEP" model="susep.mapeamento">
+        <field name="name">CEP</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">8,0</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="PAIS" model="susep.mapeamento">
+        <field name="name">PAIS</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">20</field>
+        <field name="formato1">{:.20}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="TIPO_MOV" model="susep.mapeamento">
+        <field name="name">TIPO_MOV</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">3,0</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="UF_DEP" model="susep.mapeamento">
+        <field name="name">UF_DEP</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">2</field>
+        <field name="formato1">{:.2}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="UF_RISCO" model="susep.mapeamento">
+        <field name="name">UF_RISCO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">2</field>
+        <field name="formato1">{:.2}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NUM_APOL" model="susep.mapeamento">
+        <field name="name">NUM_APOL</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">20</field>
+        <field name="formato1">{:.20}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NUM_END" model="susep.mapeamento">
+        <field name="name">NUM_END</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">20</field>
+        <field name="formato1">{:.20}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NUM_PROP" model="susep.mapeamento">
+        <field name="name">NUM_PROP</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">20</field>
+        <field name="formato1">{:.20}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="DT_PROP" model="susep.mapeamento">
+        <field name="name">DT_PROP</field>
+        <field name="tipo_campo">D</field>
+        <field name="tamanho_campo">8</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="CPF_SEG" model="susep.mapeamento">
+        <field name="name">CPF_SEG</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">14</field>
+        <field name="formato1">{:.14}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="QTD_SEG" model="susep.mapeamento">
+        <field name="name">QTD_SEG</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">4,0</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="CPF_TOM" model="susep.mapeamento">
+        <field name="name">CPF_TOM</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">14</field>
+        <field name="formato1">{:.14}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+     <record id="QTD_TOM" model="susep.mapeamento">
+        <field name="name">QTD_TOM</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">4</field>
+        <field name="formato1">{:.4}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="DT_EMIS" model="susep.mapeamento">
+        <field name="name">DT_EMIS</field>
+        <field name="tipo_campo">D</field>
+        <field name="tamanho_campo">8</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="DT_INI_VIG" model="susep.mapeamento">
+        <field name="name">DT_INI_VIG</field>
+        <field name="tipo_campo">D</field>
+        <field name="tamanho_campo">8</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="DT_FIM_VIG" model="susep.mapeamento">
+        <field name="name">DT_FIM_VIG</field>
+        <field name="tipo_campo">D</field>
+        <field name="tamanho_campo">8</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="PR_EMIT" model="susep.mapeamento">
+        <field name="name">PR_EMIT</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="PR_COS_CED" model="susep.mapeamento">
+        <field name="name">PR_COS_CED</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="AD_FRAC" model="susep.mapeamento">
+        <field name="name">AD_FRAC</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="CUST_APOL" model="susep.mapeamento">
+        <field name="name">CUST_APOL</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="IOF" model="susep.mapeamento">
+        <field name="name">IOF</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="COMIS" model="susep.mapeamento">
+        <field name="name">COMIS</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="COMIS_COSS" model="susep.mapeamento">
+        <field name="name">COMIS_COSS</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="PRO_LAB" model="susep.mapeamento">
+        <field name="name">PRO_LAB</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="CPF_ESTIP" model="susep.mapeamento">
+        <field name="name">CPF_ESTIP</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">14</field>
+        <field name="formato1">{:.14}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="IS" model="susep.mapeamento">
+        <field name="name">IS</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+     <record id="COD_RAMO" model="susep.mapeamento">
+        <field name="name">COD_RAMO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">4</field>
+        <field name="formato1">{:.4}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="PRESTACAO" model="susep.mapeamento">
+        <field name="name">PRESTACAO</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">2,0</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="QTDE_PREST" model="susep.mapeamento">
+        <field name="name">QTDE_PREST</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">2,0</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="DT_EMIS_PRE" model="susep.mapeamento">
+        <field name="name">DT_EMIS_PR</field>
+        <field name="tipo_campo">D</field>
+        <field name="tamanho_campo">8</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="DT_VEN_PRE" model="susep.mapeamento">
+        <field name="name">DT_VEN_PRE</field>
+        <field name="tipo_campo">D</field>
+        <field name="tamanho_campo">8</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="PERC_COSS" model="susep.mapeamento">
+        <field name="name">PERC_COSS</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="OFER" model="susep.mapeamento">
+        <field name="name">OFER</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">1,0</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="COMIS_COSS_CED" model="susep.mapeamento">
+        <field name="name">COMIS_COSS_CED</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+     <record id="DT_REC_PRE" model="susep.mapeamento">
+        <field name="name">DT_REC_PRE</field>
+        <field name="tipo_campo">D</field>
+        <field name="tamanho_campo">8</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="DT_VEN_PRE" model="susep.mapeamento">
+        <field name="name">DT_VEN_PRE</field>
+        <field name="tipo_campo">D</field>
+        <field name="tamanho_campo">8</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NUM_BAN" model="susep.mapeamento">
+        <field name="name">NUM_BAN</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">4,0</field>
+        <field name="formato1">{:.4}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="CNPJ_BAN" model="susep.mapeamento">
+        <field name="name">CNPJ_BAN</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">15,0</field>
+         <field name="formato1">{:.15}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NUM_BOL" model="susep.mapeamento">
+        <field name="name">NUM_BOL</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">50</field>
+         <field name="formato1">{:.50}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NUM_DOC" model="susep.mapeamento">
+        <field name="name">NUM_DOC</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">30</field>
+         <field name="formato1">{:.30}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NUM_AGE" model="susep.mapeamento">
+        <field name="name">NUM_AGE</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">30</field>
+         <field name="formato1">{:.30}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NUM_NOS" model="susep.mapeamento">
+        <field name="name">NUM_NOS</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">30</field>
+         <field name="formato1">{:.30}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="VAL_DOC" model="susep.mapeamento">
+        <field name="name">VAL_DOC</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="VAL_DESC" model="susep.mapeamento">
+        <field name="name">VAL_DESC</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="VAL_MUL" model="susep.mapeamento">
+        <field name="name">VAL_MUL</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="VAL_COB" model="susep.mapeamento">
+        <field name="name">VAL_COB</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="PR_N_GANHO" model="susep.mapeamento">
+        <field name="name">PR_N_GANHO</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">16,2</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="COLET" model="susep.mapeamento">
+        <field name="name">COLET</field>
+        <field name="tipo_campo">N</field>
+        <field name="tamanho_campo">1,0</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="NUM_PROC" model="susep.mapeamento">
+        <field name="name">NUM_PROC</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">20</field>
+        <field name="formato1">{:.20}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+
+
+    <record id="EMFSEQ" model="susep.mapeamento">
+        <field name="name">EMFSEQ</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">6</field>
+        <field name="formato1">{:0>6}</field>
+        <field name="formato2">{:.6}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="ENTCODIGO" model="susep.mapeamento">
+        <field name="name">ENTCODIGO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">5</field>
+        <field name="formato1">{:0>5}</field>
+        <field name="formato2">{:.5}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="MRFMESANO" model="susep.mapeamento">
+        <field name="name">MRFMESANO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">8</field>
+        <field name="formato1">{:.8}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="QUAID" model="susep.mapeamento">
+        <field name="name">QUAID</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">3</field>
+        <field name="formato1">{:0>3}</field>
+        <field name="formato2">{:.3}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="ATVCOP" model="susep.mapeamento">
+        <field name="name">ATVCOP</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">5</field>
+        <field name="formato1">{:0>5}</field>
+        <field name="formato2">{:.5}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="TPFOPERADOR" model="susep.mapeamento">
+        <field name="name">TPFOPERADOR</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">1</field>
+        <field name="formato1">{:0>1}</field>
+        <field name="formato2">{:.1}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="FTRCODIGO" model="susep.mapeamento">
+        <field name="name">FTRCODIGO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">3</field>
+        <field name="formato1">{:0>3}</field>
+        <field name="formato2">{:.3}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="LCRCODIGO" model="susep.mapeamento">
+        <field name="name">LCRCODIGO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">3</field>
+        <field name="formato1">{:0>3}</field>
+        <field name="formato2">{:.3}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="TCTCODIGO" model="susep.mapeamento">
+        <field name="name">TCTCODIGO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">2</field>
+        <field name="formato1">{:0>2}</field>
+        <field name="formato2">{:.2}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="TPECODIGO" model="susep.mapeamento">
+        <field name="name">TPECODIGO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">4</field>
+        <field name="formato1">{:0>4}</field>
+        <field name="formato2">{:.4}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="EMFPRAZOFLUXO" model="susep.mapeamento">
+        <field name="name">EMFPRAZOFLUXO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">5</field>
+        <field name="formato1">{:0>5}</field>
+        <field name="formato2">{:.5}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="EMFVLREXPRISCO" model="susep.mapeamento">
+        <field name="name">EMFVLREXPRISCO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">15</field>
+        <field name="formato1">{:0>15}</field>
+        <field name="formato2">{:.15}</field>
+        <field name="trocar_valor">sim</field>
+    </record>
+
+    <record id="EMFCNPJFUNDO" model="susep.mapeamento">
+        <field name="name">EMFCNPJFUNDO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">14</field>
+        <field name="formato1">{:0>14}</field>
+        <field name="formato2">{:.14}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="EMFCODISIN" model="susep.mapeamento">
+        <field name="name">EMFCODISIN</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">12</field>
+        <field name="formato1">{:0>12}</field>
+        <field name="formato2">{:.12}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="EMFCODCUSTODIA" model="susep.mapeamento">
+        <field name="name">EMFCODCUSTODIA</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">12</field>
+        <field name="formato1">{:0>12}</field>
+        <field name="formato2">{:.12}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="EMFMULTIPLOFATOR" model="susep.mapeamento">
+        <field name="name">EMFMULTIPLOFATOR</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">1</field>
+        <field name="formato1">{:0>1}</field>
+        <field name="formato2">{:.1}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="EMFTXCONTRATADO" model="susep.mapeamento">
+        <field name="name">EMFTXCONTRATADO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">6</field>
+        <field name="formato1">{:0>6}</field>
+        <field name="formato2">{:.6}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="EMFTXMERCADO" model="susep.mapeamento">
+        <field name="name">EMFTXMERCADO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">6</field>
+        <field name="formato1">{:0>6}</field>
+        <field name="formato2">{:.6}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="TPFOPERADORDERIVATIVO" model="susep.mapeamento">
+        <field name="name">TPFOPERADORDERIVATIVO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">1</field>
+        <field name="formato1">{:0>1}</field>
+        <field name="formato2">{:.1}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+    <record id="EMFVLRDERIVATIVO" model="susep.mapeamento">
+        <field name="name">EMFVLRDERIVATIVO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">15</field>
+        <field name="formato1">{:0>15}</field>
+        <field name="formato2">{:.15}</field>
+        <field name="trocar_valor">sim</field>
+    </record>
+    <record id="EMFCODGRUPO" model="susep.mapeamento">
+        <field name="name">EMFCODGRUPO</field>
+        <field name="tipo_campo">C</field>
+        <field name="tamanho_campo">6</field>
+        <field name="formato1">{:0>6}</field>
+        <field name="formato2">{:.6}</field>
+        <field name="trocar_valor">nao</field>
+    </record>
+</odoo>

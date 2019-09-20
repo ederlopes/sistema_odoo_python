@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="cotacao_diaria_form">
+        <field name="name">cotacao.diaria.form</field>
+        <field name="model">cotacao.diaria</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="cotacao_diaria" string="Processar Cotação" class="btn-danger" type="object"  />
+                </header>
+                <sheet>
+                    <separator string="Cotação Diária" />
+                    <group>
+                        <field name="data_cadastro" />
+                        <field name="taxa_cotacao_compra" />
+                        <field name="taxa_cotacao_venda" />
+                        <field name="id_user" />
+                        <field name="currency_id" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="susep_quadro_tree">
+        <field name="name">cotacao.diaria.tree</field>
+        <field name="model">cotacao.diaria</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Idea list">
+                <field name="data_cadastro" />
+                <field name="taxa_cotacao_compra" />
+                <field name="taxa_cotacao_venda" />
+                <field name="id_user" />
+                <field name="currency_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="cotacao_moeda_action">
+        <field name="name">Cotação Diária</field>
+        <field name="res_model">cotacao.diaria</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

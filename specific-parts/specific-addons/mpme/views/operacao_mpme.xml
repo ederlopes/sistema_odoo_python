@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- Tree da Operacao -->
+    <record id="operacao_mpme_view_tree" model="ir.ui.view">
+        <field name="name">operacao.view.tree</field>
+        <field name="model">operacao.mpme</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="exportador_id" />
+                <field name="importador_id" />
+                <field name="exportador_linha_negocio_id" />
+                <field name="natureza_juridica_id" />
+                <field name="natureza_risco_id" />
+                <field name="moeda" />
+                <field name="valor_solicitado" sum="Total operacao"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form da Operacao -->
+    <record id="operacao_mpme_view_form" model="ir.ui.view">
+        <field name="name">sce.operacao.view.form</field>
+        <field name="model">operacao.mpme</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                   <field name="state_sigla" invisible="1"/>
+                   <button name="enviar_operacao" string="Enviar" class="btn-danger" type="object" attrs="{'invisible': [('state_sigla', '!=', 'aguardando_envio')]}" groups="sce.group_exportador" />
+                   <field name="state" widget="statusbar" clickable="False" />
+                </header>
+                <sheet>
+                    <separator string="Operação - MPME" />
+                    <notebook>
+                        <page string="Dados da Operação">
+                            <group col="4" colspan="4">
+                                <field name="exportador_id" col="4" colspan="4" required="True"
+                                       options="{'no_create': True}"
+                                       context="{'form_view_ref':'sce.sce_res_partner_empresa_exportador_view_form'}"/>
+                                <field name="exportador_linha_negocio_id"
+                                       required="True"
+                                       options="{'no_create': True}"
+                                       context="{'exportador_id': 'exportador_id'}" domain="[('exportador_id', '=', exportador_id),('linha_negocio_id', '=', %(sce.linha_negocio_mpme)d)]" />
+                                <field name="linha_negocio_id" />
+                            </group>
+                            <group attrs="{'invisible': [('modalidade_escolhida', 'in', ['PRÉ'])]}">
+                                <field name="country_id" placeholder="País"
+                                       attrs="{'required': [('modalidade_escolhida', 'in', ['PÓS', 'PRÉ+PÓS'])]}" />
+                                <field name="importador_id" placeholder="Importador"
+                                       attrs="{'required': [('modalidade_escolhida', 'in', ['PÓS', 'PRÉ+PÓS'])]}"
+                                       domain="[('country_id', '=', country_id)]"
+                                       context="{'pais_id': country_id, 'default_country_id': country_id, 'default_is_company': 'True',  'form_view_ref':'sce.sce_empresa_importador_operacao_mpme_view_form'}"/>
+                            </group>
+                            <group>
+                                <field name="natureza_juridica_id"
+                                       required="True"
+                                       widget="selection"/>
+                                <field name="natureza_risco_id" required="True"
+                                       widget="selection" domain="[('natureza_juridica_id', '=', natureza_juridica_id)]"/>
+                            </group>
+
+                            <group col="4" colspan="4">
+                                <field name="setor_atividade_ids" col="4" colspan="4"
+                                       required="True"
+                                       options="{'no_create': True}"
+                                       widget="many2many_tags"
+                                       domain="[('linha_negocio_id', '=', linha_negocio_id)]" />
+                                <field name="moeda" required="True" />
+                                <field name="valor_solicitado" required="True" />
+                            </group>
+                            <field name="flag_demonstrativo" required="True" />
+                            <strong>A fim de que possamos dar continuidade à analise da operação,
+                                solicitamos enviar, se possível com brevidade, os  demonstrativos financeiros
+                                dos últimos 3 (três) anos.</strong>
+                            <field name="modalidade_escolhida" invisible="1"/>
+
+                            <separator string="Perguntas" />
+                            <div class="alert alert-info info_icon" role="alert">
+                                <p><strong>É a primeira exportação da empresa?</strong></p>
+                                <field name="first_exp_empresa" widget="radio" required="True" />
+                            </div>
+                            <div class="alert alert-info info_icon" role="alert">
+                                <p><strong>É a primeira exportação deste produto?</strong></p>
+                                <field name="first_exp_prod" widget="radio" required="True" />
+                            </div>
+                            <div class="alert alert-info info_icon" role="alert">
+                                <p><strong>É a primeira exportação para este país?</strong></p>
+                                <field name="first_exp_pais" widget="radio" required="True" />
+                            </div>
+                            <div class="alert alert-info info_icon" role="alert">
+                                <p><strong>É a primeira exportação com o uso do SCE/MPME?</strong></p>
+                                <field name="first_exp_sce" widget="radio" required="True" />
+                            </div>
+                            <div class="alert alert-info info_icon" role="alert">
+                                <div>Caso o país que deseje fazer exportação não esteja na lista, favor entrar em contato com ABGF:
+                                    <strong>Rio de Janeiro -</strong>  +55 (21) 2510-5008
+                                </div>
+                            </div>
+                        </page>
+                        <page string="Análise de Limite Operacional" groups="sce.group_analista_abgf" attrs="{'invisible': [('state_sigla', '=', 'aguardando_envio')]}">
+                            <div class="row">
+                                <div class="col-2">
+                                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                        <a class="nav-link active" id="v-pills-controle-capital-tab" data-toggle="pill" href="#v-pills-controle-capital" role="tab" aria-controls="v-pills-controle-capital" aria-selected="true">Controle de Capital</a>
+                                        <a class="nav-link" id="v-pills-controle-pais-tab" data-toggle="pill" href="#v-pills-controle-pais" role="tab" aria-controls="v-pills-controle-pais" aria-selected="false">Controle do País</a>
+                                    </div>
+                                </div>
+                                <div class="col-10">
+                                    <div class="col-11 border border-right-0 border-top-0 border-bottom-0">
+                                        <div class="tab-content" id="v-pills-tabContent">
+                                            <div class="tab-pane show active" id="v-pills-controle-capital" role="tabpanel" aria-labelledby="v-pills-controle-capital">
+                                                <separator string="Controle de Capital" />
+                                                <group col="4" colspan="4">
+                                                    <field name="fundo_principal_id" options="{'no_create_edit': True, 'no_open': True}" />
+                                                    <field name="taxa_cotacao" />
+                                                </group>
+                                                <field name="operacao_fundo_ids" widget="one2many_tags">
+                                                    <tree editable="botton" delete="false" create="false">
+                                                        <field name="fundo_id" readonly="1" />
+                                                        <field name="valor_solicitado" invisible="1" />
+                                                        <field name="taxa_cotacao"  invisible="1" />
+                                                        <field name="percent_utilizado" sum="Total" />
+                                                        <field name="valor_aprovacao" sum="Total" />
+                                                        <field name="saldo_suficiente" />
+                                                    </tree>
+                                                </field>
+                                            </div>
+                                            <div class="tab-pane" id="v-pills-controle-pais" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                                                <separator string="Controle do País" />
+                                                <group col="4" colspan="4">
+                                                    <field name="country_ctrl_pais_id" />
+                                                    <field name="moeda_ctrl_pais" />
+                                                    <field name="valor_solicitado_ctrl_pais" />
+                                                    <field name="taxa_cotacao" />
+                                                    <field name="vl_solicitado_cotacao" />
+                                                    <field name="saldo_suficiente" />
+                                                </group>
+                                                <label for="parecer_controle_pais" string="Parecer" />
+                                                <field name="parecer_controle_pais" widget="html" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </page>
+                    </notebook>
+                    <hr />
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids"
+                               widget="mail_followers"
+                               groups="base.group_user"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action da Operacao -->
+     <record model="ir.actions.act_window" id="operacao_action_mpme">
+       <field name="name">Operação MPME</field>
+       <field name="res_model">operacao.mpme</field>
+       <field name="view_mode">tree,form</field>
+       <field name="view_id" ref="operacao_mpme_view_tree"/>
+       <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('operacao_mpme_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('operacao_mpme_view_form')})
+       ]"/>
+         <field name="context">{'default_status_id':1}</field>
+   </record>
+</odoo>

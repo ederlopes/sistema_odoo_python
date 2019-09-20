@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Tree da validacao -->
+    <record id="sce_validacao_view_tree" model="ir.ui.view">
+        <field name="name">sce.validacao.view.tree</field>
+        <field name="model">validacao</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="url" widget="url"/>
+                <field name="linha_negocio_id" />
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Form do banco -->
+    <record id="sce_validacao_view_form" model="ir.ui.view">
+        <field name="name">sce.validacao.view.form</field>
+        <field name="model">validacao</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group col="2" colspan="2">
+                        <field name="name" string="Titulo"/>
+                        <field name="url" widget="url" string="URL"/>
+                        <field name="linha_negocio_id" />
+                        <field name="active" widget="boolean_toggle"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="validacao_action" model="ir.actions.act_window">
+        <field name="name">Validações a serem realizadas</field>
+        <field name="res_model">validacao</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

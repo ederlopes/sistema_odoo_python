@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+id_grupo_exportador_operacao_mpme,id_grupo_exportador_operacao_mpme,model_operacao_mpme,sce.group_exportador,1,1,1,1
+id_grupo_analista_operacao_mpme,id_grupo_analista_operacao_mpme,model_operacao_mpme,sce.group_analista_abgf,1,1,0,0
+id_grupo_admin_operacao_mpme,id_grupo_admin_operacao_mpme,model_operacao_mpme,base.group_system,1,1,1,1

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="banco_bb" model="res.bank">
+            <field name="name">Banco do Brasil</field>
+            <field name="street">Endereço do Banco...</field>
+            <field name="bic">001</field>
+            <field name="state">89</field>
+            <field name="country">31</field>
+            <field name="email">@</field>
+            <field name="active">True</field>
+        </record>
+        <record id="sem_banco_emissor" model="res.bank">
+            <field name="name">Sem banco emissor</field>
+            <field name="street">Endereço do Banco...</field>
+            <field name="bic">999</field>
+            <field name="state">89</field>
+            <field name="country">31</field>
+            <field name="email">@</field>
+            <field name="active">True</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+     <record id="natureza_risco_view_tree" model="ir.ui.view">
+        <field name="name">natureza_risco.view.tree</field>
+        <field name="model">natureza.risco</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+                <field name="active" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="natureza_risco_view_form" model="ir.ui.view">
+        <field name="name">natureza_risco.view.form</field>
+        <field name="model">natureza.risco</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <label for="name" string="Nome"/>
+                        <field name="name" nolabel="1"/>
+                        <field name="active" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+
+    </record>
+
+    <record model="ir.actions.act_window" id="natureza_risco_action">
+       <field name="name">Natureza do risco</field>
+       <field name="res_model">natureza.risco</field>
+       <field name="view_mode">tree,form</field>
+       <field name="view_id" ref="natureza_risco_view_tree"/>
+       <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('natureza_risco_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('natureza_risco_view_form')})
+       ]"/>
+   </record>
+
+
+
+</odoo>

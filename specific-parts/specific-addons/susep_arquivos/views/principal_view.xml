@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="susep_arquivo_form">
+        <field name="name">susep.arquivo.form</field>
+        <field name="model">susep.arquivos</field>
+        <field name="arch" type="xml">
+           <form>
+                <sheet>
+                    <separator string="Arquivos"/>
+                    <group col="4">
+                        <field name="descricao"/>
+                        <field name="quadro_id"/>
+                    </group>
+                    <group>
+                        <field name="data"/>
+                    </group>
+                    <group>
+                        <field name="arquivo" filename="nome_arquivo"/>
+                    </group>
+                     <group>
+                         <field name="arquivo_txt" filename="nome_txt"/>
+                    </group>
+                    <field name="nome_txt" invisible="1"/>
+                    <field name="nome_arquivo" invisible="1"/>
+                    <field name="id_user" invisible="1"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="susep_arquivos_tree">
+        <field name="name">susep.arquivos.tree</field>
+        <field name="model">susep.arquivos</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Idea list">
+                <field name="descricao"/>
+                <field name="data"/>
+                <field name="nome_arquivo"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="susep_arquivos_action">
+        <field name="name">SUSEP</field>
+        <field name="res_model">susep.arquivos</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

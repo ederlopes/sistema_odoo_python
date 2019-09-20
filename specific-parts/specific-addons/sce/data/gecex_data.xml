@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="gecex_banco_bb" model="gecex">
+            <field name="name">BB Rio</field>
+            <field name="display_name">BB Rio</field>
+            <field name="company_id">1</field>
+            <field name="street">Endereço da GECEX...</field>
+            <field name="state_id">89</field>
+            <field name="country_id">31</field>
+            <field name="cpf_cnpj">00.000.000/0000-00.</field>
+            <field name="is_solicitante">false</field>
+            <field name="instituicao_financeira_id" ref="sce.instituicao_bb" />
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

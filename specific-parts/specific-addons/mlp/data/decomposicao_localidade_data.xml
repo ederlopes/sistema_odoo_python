@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="decomp_localidade1" model="decomposicao.localidade">
+            <field name="name">Brasileira</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_localidade2" model="decomposicao.localidade">
+            <field name="name">Estrangeira</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_localidade3" model="decomposicao.localidade">
+            <field name="name">Local</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- EMPRESA - Exportador -->
+
+    <!-- Tree da Empresa - Exportador -->
+    <record id="sce_exportador_view_tree"
+            model="ir.ui.view">
+        <field name="name">sce.exportador.view.tree</field>
+        <field name="model">exportador</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <tree decoration-success="active==True"
+                  decoration-danger="active==False">
+                <field name="name"/>
+                <field name="cpf_cnpj" string="CNPJ"/>
+                <field name="phone"/>
+                <field name="active" string="Status" widget="boolean_toggle"
+                       groups="sce.group_analista_abgf"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form da Empresa - Exportador -->
+    <record id="sce_exportador_view_form"
+            model="ir.ui.view">
+        <field name="name">sce.exportador.view.form</field>
+        <field name="model">exportador</field>
+        <field name="priority">16</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                        <button name="enviar_cadastro" string="Enviar" type="object" class="btn-danger" groups="sce.group_exportador"
+                                attrs="{'invisible': ['|','|',('state', '!=', 'rascunho'),('socio_ids', '=', []),('exportador_linha_negocio_ids', '=', [])]}"/>
+                        <field name="state" widget="statusbar"  statusbar_visible="rascunho,enviado,em_analise" options="{'clickable': '1'}" />
+                    </header>
+                <sheet>
+
+                    <div class="oe_button_box" name="button_box"
+                         groups="sce.group_analista_abgf">
+                        <button name="%(parecer_tecnico_exportador_wizard_action)d"
+                                type="action"
+                                class="oe_stat_button" icon="fa-user"
+                                style="width: 173px !important"
+                        >
+                            <field name="active" widget="boolean_button"
+                                   options='{"terminology": {
+                                    "string_true": "Cadastro Liberado",
+                                    "hover_true": "Recursar Cadastro",
+                                    "string_false": "Cadastro Recursado",
+                                    "hover_false": "Liberar Cadastro"}}'/>
+                        </button>
+                    </div>
+                    <group string="Dados do Exportador">
+                        <field name="is_company" invisible="True"/>
+                        <group>
+                            <field name="parent_id" string="Contato principal"
+                                   readonly="True"
+                                   invisible="True"
+                                   context="{'form_view_ref':'sce.sce_res_partner_view_form'}"/>
+                            <field name="name" string="Nome Fantasia" required="True"/>
+                            <field name="razao_social" required="True"/>
+                            <field name="email" required="True"/>
+                            <label for="cpf_cnpj" string="CNPJ" required="True"/>
+                            <field name="cpf_cnpj" nolabel="1" widget="mask"
+                                   data-inputmask-mask="99.999.999/9999-99" required="True"/>
+                        </group>
+                        <group>
+                            <field name="function" />
+                            <label for="street" string="Endereço"/>
+                            <div class="o_address_format">
+                                <field name="street" placeholder="Endereço" required="True"
+                                       class="o_address_street"/>
+                                <field name="street2" placeholder="Complemento"
+                                       class="o_address_street"/>
+                                <field name="state_id" class="o_address_state"
+                                       placeholder="Estado"
+                                       context="{'country_id': 31, 'zip': zip}"/>
+                                <field name="city" placeholder="Cidade"
+                                       class="o_address_city"/>
+                                <field name="zip" placeholder="CEP"
+                                       class="o_address_zip"/>
+                                <field name="country_id" placeholder="País"
+                                       class="o_address_country"
+                                       invisible="1"/>
+                            </div>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="child_ids" />
+                    </group>
+
+                    <field name="modalidades_escolhidas" invisible="1"/>
+
+                    <group attrs="{'invisible': ['!',('modalidades_escolhidas','like', 'PÓS')] }">
+                        <field name="tempo_existencia"/>
+                        <field name="ano_informacoes"/>
+                        <field name="fat_bruto_anual"/>
+                        <field name="val_exportacao_anual"/>
+                        <field name="n_funcionarios"/>
+                    </group>
+
+                    <group attrs="{'invisible': ['!',('modalidades_escolhidas','like', 'PRÉ')] }">
+                        <field name="comprovante_exportacoes"/>
+                        <field name="dre"/>
+                        <field name="simples_nacional"/>
+                        <field name="inscricao_estadual"/>
+                        <field name="capital_social"/>
+                    </group>
+
+                    <group attrs="{'invisible': ['!',('modalidades_escolhidas','like', 'PRÉ+PÓS')] }">
+                        <label string="Participou de algum evento de divulgação do SCE/MPME?"
+                               for="participou_evento"/>
+                        <field name="participou_evento" nolabel="1"/>
+                        <label string="Como ficou sabendo do SCE/MPME?"
+                               for="como_ficou_sabendo"/>
+                        <field name="como_ficou_sabendo" nolabel="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Sócios">
+                            <field name="socio_ids" nolabel="1"
+                                   context="{'form_view_ref':'sce.sce_socio_view_form'}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="tipo_socio"/>
+                                    <field name="cpf_cnpj"/>
+                                    <field name="percentual"
+                                           sum="Total porcentagem"/>
+                                </tree>
+                            </field>
+                            <div class="alert alert-info info_icon"
+                                 role="alert">
+                                <span class="fa fa-info fa-2x"/>
+                                A soma do % das sócios deve ser
+                                igual a 100%
+                            </div>
+                        </page>
+                        <page string="Usuarios" name="usuarios">
+                            <button name="%(adicionar_funcionario_wizard_action)d"
+                                    type="action"
+                                    string="Adicionar Funcionário"
+                                    groups="sce.group_exportador"/>
+                            <group>
+                                <field name="funcionario_exportador_ids"
+                                       widget="one2many_list" nolabel="1"
+                                       context="{'form_view_ref':'sce.sce_funcionario_exportador_view_form'}">
+                                    <tree create="false">
+                                        <field name="name_funcionario"/>
+                                        <field name="cpf_cnpj_funcionario"/>
+                                        <field name="email_funcionario"/>
+                                        <field name="mobile_funcionario"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Linhas de Negócios">
+                            <field name="exportador_linha_negocio_ids"
+                                   nolabel="1" widget="one2many_list">
+                                <tree editable="bottom"
+                                      decoration-success="active==True"
+                                      decoration-danger="active==False">
+                                    <field name="linha_negocio_id"
+                                           required="1"/>
+                                    <field name="modalidade_id" required="1"
+                                           domain="[('linha_negocio_id', '=', linha_negocio_id)]"/>
+                                     <field name="tipo_financiamento_id" required="1"
+                                           domain="[('modalidade_id', '=', modalidade_id)]"/>
+                                    <field name="active"
+                                           widget="boolean_toggle"
+                                           groups="sce.group_analista_abgf"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Instituições Financeiras">
+                            <field name="bank_ids" nolabel="1">
+                                <tree decoration-success="active==True"
+                                      decoration-danger="active==False">
+                                    <field name="name"/>
+                                    <field name="state"/>
+                                    <field name="city"/>
+                                    <field name="active"
+                                           widget="boolean_toggle"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Documentos Obrigatórios">
+                            <field name="declaracao_conformidade_arq"
+                                   readonly="1"
+                            />
+                            <div role="separator" class="dropdown-divider"/>
+                            <group col="2" >
+                                 <field col="2" colspan="2"
+                                        name="declaracao_conformidade_assinado"
+                                        required="True"
+                                        filename="nome_declaracao_conformidade_assinado"/>
+                                 <field name="nome_declaracao_conformidade_assinado"
+                                        invisible="1" />
+                            </group>
+                            <field name="declaracao_ant_corrupcao_arq"
+                                   readonly="1"
+                            />
+                            <div role="separator" class="dropdown-divider"/>
+                            <group col="2" >
+                                 <field col="2" colspan="2"
+                                        name="declaracao_ant_corrupcao_ass"
+                                        required="True"
+                                        filename="nome_ant_corrupcao_assinado"/>
+                                 <field
+                                         name="nome_ant_corrupcao_assinado"
+                                        invisible="1" />
+                            </group>
+                        </page>
+                        <page string="Validação" groups="sce.group_analista_abgf">
+                            <field name="exportador_validacao_ids" nolabel="1"
+                                   widget="one2many_list">
+                                <tree editable="bottom"
+                                      decoration-success="concluido==True"
+                                      decoration-danger="concluido==False">
+                                    <field name="exportador_id"/>
+                                    <field name="validacao_name"/>
+                                    <field name="validacao_url" widget="url"/>
+                                    <field name="concluido"
+                                           widget="boolean_toggle"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="exportador_search_form_view" model="ir.ui.view">
+        <field name="name">exportador.search.form</field>
+        <field name="model">exportador</field>
+        <field name="type">search</field>
+        <field name="arch" type="xml">
+            <search string="Exportadores">
+                <filter string="Exportadores" name="filter_no_active"
+                        domain="['|', ('active', '=', 1),('active', '=', 0)]"/>
+            </search>
+        </field>
+    </record>
+    <!-- Action da Empresa -->
+    <record model="ir.actions.act_window"
+            id="sce_exportador_action">
+        <field name="name">Dados do Exportador</field>
+        <field name="res_model">exportador</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id"
+               ref="sce_exportador_view_tree"/>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'tree', 'view_id': ref('sce_exportador_view_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('sce_exportador_view_form')})
+        ]"/>
+        <field name="search_view_id" ref="exportador_search_form_view"/>
+        <field name="domain">[('is_company', '=', True)]
+        </field>
+        <field name="context">{'search_default_filter_no_active': 1,
+            'default_is_company':True, 'default_company_type':'company', 'default_country_id': 31}
+        </field>
+    </record>
+
+</odoo>

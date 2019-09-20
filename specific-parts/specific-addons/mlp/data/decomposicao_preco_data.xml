@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="decomp_preco1" model="decomposicao.preco">
+            <field name="name">Mercadorias (bens)</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_preco2" model="decomposicao.preco">
+            <field name="name">Estudos / Projetos</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_preco3" model="decomposicao.preco">
+            <field name="name">Obras Civis</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_preco4" model="decomposicao.preco">
+            <field name="name">Montagem / Instalação</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_preco5" model="decomposicao.preco">
+            <field name="name">Assistência Técnica</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_preco6" model="decomposicao.preco">
+            <field name="name">Serviços Pós-venda</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_preco7" model="decomposicao.preco">
+            <field name="name">Transportes</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_preco8" model="decomposicao.preco">
+            <field name="name">Seguros</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_preco9" model="decomposicao.preco">
+            <field name="name">Comissões</field>
+            <field name="active">True</field>
+        </record>
+        <record id="decomp_preco10" model="decomposicao.preco">
+            <field name="name">Outros</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

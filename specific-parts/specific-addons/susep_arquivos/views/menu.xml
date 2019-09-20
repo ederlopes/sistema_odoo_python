@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+     <menuitem id="susep_main_menu"
+        name="SUSEP"
+        sequence="7"/>
+
+    <menuitem id="susep_cadastro_menu"
+        name="Cadastro"
+        parent="susep_main_menu"
+        sequence="1"/>
+
+    <menuitem id="susep_arquivos_sub_menu"
+        name="Arquivos"
+        action="susep_arquivos_action"
+        parent="susep_cadastro_menu"
+        sequence="2"/>
+
+    <menuitem id="susep_quadro_sub_menu"
+        name="Quadros"
+        action="susep_quadro_action"
+        parent="susep_cadastro_menu"
+        sequence="3"/>
+
+     <menuitem id="susep_mapeamento_sub_menu"
+        name="Mapeamento Campos"
+        action="susep_mapeamento_action"
+        parent="susep_cadastro_menu"
+        sequence="4"/>
+
+     <menuitem id="susep_planilha_sub_menu"
+        name="Tabs Planilha"
+        action="susep_planilha_action"
+        parent="susep_cadastro_menu"
+        sequence="5"/>
+</odoo>

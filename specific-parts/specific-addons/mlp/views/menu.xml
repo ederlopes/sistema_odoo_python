@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- sub-menu operacao_mlp -->
+    <menuitem id="operacao_sub_menu_mlp"
+        name="Médio e Longo Prazo - MLP"
+        action="operacao_action_mlp"
+        parent="sce.operacao_menu"
+        sequence="40"/>
+
+    <!-- sub-menu cadastro tipo de garantia -->
+    <menuitem id="tipo_garantia_sub_menu"
+        name="Tipo de garantia"
+        action="tipo_garantia_action"
+        parent="sce.sce_cadastro_menu"
+        groups="sce.group_analista_abgf,base.group_system"
+        sequence="50"/>
+
+    <!-- sub-menu cadastro tipo de garantia / garantidor -->
+    <menuitem id="tipo_garantia_garantidor_sub_menu"
+        name="Tipo de garantia / garantidor"
+        action="tipo_garantia_garantidor_action"
+        parent="sce.sce_cadastro_menu"
+        groups="sce.group_analista_abgf,base.group_system"
+        sequence="60"/>
+</odoo>

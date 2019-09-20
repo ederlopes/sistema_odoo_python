@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="natureza_risco_comercial" model="natureza.risco">
+            <field name="name">Comercial, Politico, Extraordinário</field>
+            <field name="natureza_juridica_id" ref="sce.natureza_juridica_privada" />
+            <field name="active">True</field>
+        </record>
+
+        <record id="natureza_risco_soberano" model="natureza.risco">
+            <field name="name">Soberano</field>
+            <field name="natureza_juridica_id" ref="sce.natureza_juridica_publica" />
+            <field name="active">True</field>
+        </record>
+
+        <record id="natureza_risco_ordinario" model="natureza.risco">
+            <field name="name">Ordinario</field>
+            <field name="natureza_juridica_id" ref="sce.natureza_juridica_publica" />
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

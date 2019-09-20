@@ -1,0 +1,385 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sce
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-06-11 14:40+0000\n"
+"PO-Revision-Date: 2019-06-11 14:40+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_back_in_edit_mode
+msgid "<i class=\"fa fa-arrow-right\"/> Back to edit mode"
+msgstr "<i class=\"fa fa-arrow-right\"/>Voltar para o modo de edição"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.record_pager
+msgid "<i class=\"fa fa-chevron-left\" role=\"img\" aria-label=\"Previous\" title=\"Previous\"/>"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.record_pager
+msgid "<i class=\"fa fa-chevron-right\" role=\"img\" aria-label=\"Next\" title=\"Next\"/>"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_home
+msgid "<i class=\"fa fa-pencil\"/>\n"
+"                            Editar dados"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_searchbar
+msgid "<span class=\"small mr-1 navbar-text\">Filter By:</span>"
+msgstr "<span class=\"small mr-1 navbar-text\">Filtrar por:</span>"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_searchbar
+msgid "<span class=\"small mr-1 navbar-text\">Group By:</span>"
+msgstr "<span class=\"small mr-1 navbar-text\">Agrupar por:</span>"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_searchbar
+msgid "<span class=\"small mr-1 navbar-text\">Sort By:</span>"
+msgstr "<span class=\"small mr-1 navbar-text\">Ordenar por:</span>"
+
+#. module: sce
+#: model:mail.template,body_html:sce.mail_template_user_signup_account_created_verify
+msgid "<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;\"><tr><td align=\"center\">\n"
+"<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"padding: 16px; background-color: white; color: #454748; border-collapse:separate;\">\n"
+"<tbody>\n"
+"    <!-- HEADER -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"middle\">\n"
+"                    <span style=\"font-size: 10px;\">Your Account</span><br/>\n"
+"                    <span style=\"font-size: 20px; font-weight: bold;\">\n"
+"                        ${object.name}\n"
+"                    </span>\n"
+"                </td><td valign=\"middle\" align=\"right\">\n"
+"                    <img src=\"/logo.png?company=${object.company_id.id}\" style=\"padding: 0px; margin: 0px; height: auto; width: 80px;\" alt=\"${object.company_id.name}\"/>\n"
+"                </td></tr>\n"
+"                <tr><td colspan=\"2\" style=\"text-align:center;\">\n"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"    <!-- CONTENT -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"top\" style=\"font-size: 13px;\">\n"
+"                    <div>\n"
+"                        Dear ${object.name},<br/><br/>\n"
+"                        Your account has been successfully created!<br/>\n"
+"                        Your login is <strong>${object.email}</strong><br/>\n"
+"                        To gain access to your account, you can use the following link:\n"
+"                        <div style=\"margin: 16px 0px 16px 0px;\">\n"
+"                            <a href=\"/web/confirmar?${ctx['auth_login']}\" style=\"background-color: #875A7B; padding: 8px 16px 8px 16px; text-decoration: none; color: #fff; border-radius: 5px; font-size:13px;\">\n"
+"                                Go to My Account\n"
+"                            </a>\n"
+"                        </div>\n"
+"                        Thanks,<br/><br/>\n"
+"                        ${user.signature | safe}<br/>\n"
+"                    </div>\n"
+"                </td></tr>\n"
+"                <tr><td style=\"text-align:center;\">\n"
+"                  <hr width=\"100%\" style=\"background-color:rgb(204,204,204);border:medium none;clear:both;display:block;font-size:0px;min-height:1px;line-height:0; margin: 16px 0px 16px 0px;\"/>\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"    <!-- FOOTER -->\n"
+"    <tr>\n"
+"        <td align=\"center\" style=\"min-width: 590px;\">\n"
+"            <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: white; font-size: 11px; padding: 0px 8px 0px 8px; border-collapse:separate;\">\n"
+"                <tr><td valign=\"middle\" align=\"left\">\n"
+"                    ${object.company_id.name}\n"
+"                </td></tr>\n"
+"                <tr><td valign=\"middle\" align=\"left\" style=\"opacity: 0.7;\">\n"
+"                    ${object.company_id.phone}\n"
+"                    % if object.company_id.email\n"
+"                        | <a href=\"'mailto:%s' % ${object.company_id.email}\" style=\"text-decoration:none; color: #454748;\">${object.company_id.email}</a>\n"
+"                    % endif\n"
+"                    % if object.company_id.website\n"
+"                        | <a href=\"'%s' % ${object.company_id.website}\" style=\"text-decoration:none; color: #454748;\">\n"
+"                        ${object.company_id.website}\n"
+"                    </a>\n"
+"                    % endif\n"
+"                </td></tr>\n"
+"            </table>\n"
+"        </td>\n"
+"    </tr>\n"
+"</tbody>\n"
+"</table>\n"
+"</td></tr>\n"
+"<!-- POWERED BY -->\n"
+"<tr><td align=\"center\" style=\"min-width: 590px;\">\n"
+"    <table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" width=\"590\" style=\"min-width: 590px; background-color: #F1F1F1; color: #454748; padding: 8px; border-collapse:separate;\">\n"
+"      <tr><td style=\"text-align: center; font-size: 13px;\">\n"
+"        Powered by <a target=\"_blank\" href=\"https://www.odoo.com?utm_source=db&amp;utm_medium=auth\" style=\"color: #875A7B;\">Odoo</a>\n"
+"      </td></tr>\n"
+"    </table>\n"
+"</td></tr>\n"
+"</table>"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.verificar_email
+msgid "ABGF"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+msgid "Alterar\n"
+"                                <span class=\"fa fa-long-arrow-right\"/>"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_archive_groups
+msgid "Archives"
+msgstr "Arquivos"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_home
+msgid "CEP"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+msgid "CPF"
+msgstr ""
+
+#. module: sce
+#: sql_constraint:res.partner:0
+msgid "CPF ou CNPJ já cadastrado!"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_home
+msgid "CPF/CNPJ"
+msgstr ""
+
+#. module: sce
+#: model:ir.model.fields,field_description:sce.field_res_partner__cpf_cnpj
+#: model:ir.model.fields,field_description:sce.field_res_users__cpf_cnpj
+msgid "CPF_CNPJ"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_home
+msgid "Cidade"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_back_in_edit_mode
+#: model_terms:ir.ui.view,arch_db:sce.portal_layout
+msgid "Close"
+msgstr "Fechar"
+
+#. module: sce
+#: model:ir.model,name:sce.model_res_partner
+msgid "Contact"
+msgstr "Contato"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_home
+msgid "Dados pessoais"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_home
+msgid "E-mail"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+msgid "Empresa"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+msgid "Endereço"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+msgid "Estado"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.auth_signup_inherited
+msgid "Ex. 999.999.999-99"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_breadcrumbs
+msgid "Home"
+msgstr "Início"
+
+#. module: sce
+#: code:addons/sce/controllers/portal.py:88
+#, python-format
+msgid "Invalid Email! Please enter a valid email address."
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.frontend_layout
+msgid "Logout"
+msgstr "Sair"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+msgid "Meus Dados"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.pager
+msgid "Next"
+msgstr "Próximo"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_home
+msgid "Nome"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_contact
+msgid "Nossos\n"
+"                contatos"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.verificar_email
+msgid "Obrigado"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.frontend_layout
+msgid "Odoo"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_record_sidebar
+msgid "Odoo Logo"
+msgstr "Logo do Odoo"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+msgid "Pais..."
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_home
+msgid "País"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.frontend_layout
+#: model_terms:ir.ui.view,arch_db:sce.portal_record_sidebar
+#: model_terms:ir.ui.view,arch_db:sce.verificar_email
+msgid "Powered by"
+msgstr "Desenvolvido por"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.pager
+msgid "Prev"
+msgstr "Ant"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_searchbar
+msgid "Search"
+msgstr "Pesquisar"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.auth_signup_inherited
+msgid "Seu CPF"
+msgstr ""
+
+#. module: sce
+#: code:addons/sce/controllers/portal.py:92
+#, python-format
+msgid "Some required fields are empty."
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_home
+msgid "Telefone"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_back_in_edit_mode
+msgid "This is a preview of the customer portal."
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_searchbar
+msgid "Toggle filters"
+msgstr ""
+
+#. module: sce
+#: model:ir.model,name:sce.model_res_users
+msgid "Users"
+msgstr "Usuários"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.verificar_email
+msgid "Usuário cadastrado com sucesso."
+msgstr ""
+
+#. module: sce
+#: model:mail.template,subject:sce.mail_template_user_signup_account_created_verify
+msgid "Welcome to ${object.company_id.name}!"
+msgstr "Bem-vindo a ${object.company_id.name}!"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+msgid "Your Contact Details"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_breadcrumbs
+msgid "Your Details"
+msgstr "Seus Detalhes"
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.verificar_email
+msgid "e-SCE - Sistema de Crédito a Exportação"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_record_sidebar
+msgid "odoo"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.verificar_email
+msgid "por utilizar o\n"
+"                    nosso sistema. Por favor entre na\n"
+"                    sua conta de e-mail e confirme seu cadastro através do link\n"
+"                    que foi enviado. Caso não tenha recebido cheque sua\n"
+"                    caixa de span ou entre em contato com o\n"
+"                    Administrador do sistema"
+msgstr ""
+
+#. module: sce
+#: model_terms:ir.ui.view,arch_db:sce.portal_my_details
+msgid "selecione..."
+msgstr ""
+

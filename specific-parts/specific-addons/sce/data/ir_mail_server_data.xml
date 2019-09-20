@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="abgf_outgoing_server" model="ir.mail_server">
+        <field name="name">Servidor ABGF Email</field>
+        <field name="smtp_host">smtp.abgf.gov.br</field>
+        <field name="smtp_port">465</field>
+        <field name="smtp_encryption">ssl</field>
+        <field name="smtp_user">sistemas@abgf.gov.br</field>
+        <field name="smtp_pass">##AbgfSis@2019!</field>
+    </record>
+
+</odoo>

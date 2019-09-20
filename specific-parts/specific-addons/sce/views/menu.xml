@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!-- Adicionar JS no odoo -->
+    <template id="assets_backend" name="tools assets" inherit_id="web.assets_backend">
+        <xpath expr=".">
+            <script type="application/javascript" src="/sce/static/src/js/menu.js"/>
+        </xpath>
+    </template>
+
+    <!-- menu principal -->
+    <menuitem id="sce_main_menu"
+          name="SCE"
+          sequence="7"/>
+
+    <!-- menu de cadastro -->
+    <menuitem id="sce_cadastro_menu"
+          name="Cadastro"
+          parent="sce_main_menu"
+          sequence="10"/>
+
+    <!-- Sub-menu Instituição Financeira -->
+    <menuitem id="sce_instituicao_financeira_sub_menu"
+          name="Instituição Financeira"
+          action="sce_res_bank_action"
+          parent="sce_cadastro_menu"
+          groups="sce.group_analista_abgf,base.group_system"
+          sequence="30"/>
+
+    <!-- Sub-menu empresas -->
+    <menuitem id="sce_dados_empresa_sub_menu"
+          name="Empresa"
+          action="sce_exportador_action"
+          parent="sce_cadastro_menu"
+          sequence="5"/>
+
+    <!-- Sub-menu usuários -->
+    <menuitem id="sce_dados_usuario_sub_menu"
+          name="Usuário"
+          action="sce_res_partner_action"
+          parent="sce_cadastro_menu"
+          groups="sce.group_analista_abgf,base.group_system"
+          sequence="6"/>
+
+    <!--sub-menu linha de negocio -->
+    <menuitem id="sce_linha_negocio_sub_menu"
+        name="Linha de Negocio"
+        action="linha_negocio_action"
+        parent="sce_cadastro_menu"
+        groups="sce.group_analista_abgf,base.group_system"
+        sequence="10"/>
+
+    <!-- sub-menu modalidade -->
+    <menuitem id="modalidade_sub_menu"
+        name="Modalidade"
+        action="modalidade_action"
+        parent="sce_cadastro_menu"
+        groups="sce.group_analista_abgf,base.group_system"
+        sequence="15"/>
+
+    <!-- sub-menu valores paises -->
+    <menuitem id="valores_paises_sub_menu"
+        name="Valores Paises"
+        action="valores_paises_action"
+        parent="sce_cadastro_menu"
+        groups="sce.group_analista_abgf,base.group_system"
+        sequence="14"/>
+
+    <!-- sub-menu template arquivos operacao -->
+    <menuitem id="tempalte_arquivo_sub_menu"
+        name="Template Arquivos"
+        action="template_arquivos_action"
+        parent="sce_cadastro_menu"
+        groups="sce.group_analista_abgf,base.group_system"
+        sequence="16"/>
+
+    <!-- menu operacao -->
+    <menuitem id="operacao_menu"
+        name="Operação"
+        parent="sce_main_menu"
+        sequence="20"/>
+
+    <!--sub-menu natureza juridica -->
+    <menuitem id="sce_natureza_juridica_sub_menu"
+        name="Natureza Juridica"
+        action="natureza_juridica_action"
+        parent="sce_cadastro_menu"
+        groups="base.group_system"
+        sequence="50"/>
+
+    <!-- sub-menu natureza risco -->
+    <menuitem id="natureza_risco_sub_menu"
+        name="Natureza do Risco"
+        action="natureza_risco_action"
+        parent="sce_cadastro_menu"
+        groups="base.group_system"
+        sequence="60"/>
+
+    <!-- sub-menu natureza risco -->
+    <menuitem id="fundo_sub_menu"
+        name="Fundos"
+        action="fundo_action"
+        parent="sce_cadastro_menu"
+        groups="base.group_system"
+        sequence="70"/>
+
+    <!-- Sub-menu Validação (atividades) -->
+    <menuitem id="sce_validacao_sub_menu"
+          name="Validações"
+          action="validacao_action"
+          parent="sce_cadastro_menu"
+          groups="sce.group_analista_abgf,base.group_system"
+          sequence="40"/>
+
+</odoo>
